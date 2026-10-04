@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cake brand search results and recommendations from The Cakery." />
+    <title>Cake search | The Cakery</title>
+    <style>
+      @font-face {
+        font-family: "Metropolis";
+        src: url("./assets/metropolis-regular.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+      }
+
+      :root {
+        --green-900: #04251c;
+        --green-800: #073b2d;
+        --beige-100: #fff9ef;
+        --beige-200: #f3e5ca;
+        --beige-300: #e7cf9d;
+        --text-soft: rgba(255, 250, 244, 0.78);
+        --border: rgba(255, 250, 244, 0.14);
+        --shadow: 0 24px 60px rgba(2, 15, 11, 0.22);
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        min-height: 100vh;
+        margin: 0;
+        color: var(--beige-100);
+        background:
+          radial-gradient(circle at 85% 8%, rgba(231, 207, 157, 0.14), transparent 24rem),
+          linear-gradient(145deg, var(--green-900), var(--green-800));
+        font-family: "Metropolis", sans-serif;
+      }
+      a { color: inherit; text-decoration: none; }
+      .page { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 34px 0 72px; }
+      .topbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 84px; }
+      .brand { display: inline-flex; align-items: center; }
+      .brand img { display: block; width: clamp(132px, 16vw, 190px); height: auto; }
+      .back-link { color: var(--beige-200); font-size: 0.9rem; }
+      .back-link:hover { color: var(--beige-100); }
+      .eyebrow { color: var(--beige-300); font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; }
+      h1 { max-width: 760px; margin: 14px 0 16px; font-size: clamp(2.5rem, 6vw, 5.6rem); line-height: 0.98; letter-spacing: -0.06em; }
+      .intro { max-width: 620px; margin: 0; color: var(--text-soft); font-size: 1.08rem; }
+      .result-section { margin-top: 58px; }
+      .section-label { margin: 0 0 18px; color: var(--beige-200); font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; }
+      .result-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+      .result-card { overflow: hidden; border: 1px solid var(--border); border-radius: 18px; background: rgba(255, 255, 255, 0.055); box-shadow: var(--shadow); }
+      .result-card img { display: block; width: 100%; height: 230px; object-fit: cover; }
+      .result-body { padding: 20px; }
+      .result-body h2 { margin: 0 0 8px; font-size: 1.35rem; }
+      .result-body p { min-height: 48px; margin: 0 0 18px; color: var(--text-soft); }
+      .result-link { display: inline-flex; align-items: center; padding: 10px 15px; border-radius: 999px; background: var(--beige-200); color: var(--green-900); font-weight: 700; font-size: 0.86rem; }
+      .recommendations { margin-top: 72px; padding-top: 28px; border-top: 1px solid var(--border); }
+      @media (max-width: 760px) {
+        .topbar { margin-bottom: 58px; }
+        .result-grid { grid-template-columns: 1fr; }
+        .result-card img { height: 210px; }
+      }
+
+      @media (max-width: 900px) {
+        .page { width: min(1120px, calc(100% - 24px)); padding: 26px 0 60px; }
+        .topbar { margin-bottom: 58px; }
+        h1 { font-size: clamp(2.2rem, 8vw, 4rem); }
+        .intro { font-size: 1rem; }
+        .result-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+        .result-card img { height: clamp(180px, 26vw, 220px); }
+      }
+
+      @media (max-width: 560px) {
+        .page { width: min(1120px, calc(100% - 24px)); padding: 20px 0 48px; }
+        .topbar { align-items: flex-start; flex-direction: column; gap: 10px; margin-bottom: 42px; }
+        .brand img { width: 132px; }
+        h1 { margin: 10px 0 12px; font-size: clamp(2rem, 12vw, 3.2rem); }
+        .eyebrow { font-size: 0.66rem; letter-spacing: 0.14em; }
+        .intro { font-size: 0.94rem; }
+        .result-section { margin-top: 38px; }
+        .recommendations { margin-top: 52px; padding-top: 22px; }
+        .result-grid { grid-template-columns: 1fr; gap: 14px; }
+        .result-card { border-radius: 16px; }
+        .result-card img { height: clamp(180px, 56vw, 230px); }
+        .result-body { padding: 16px; }
+        .result-body h2 { font-size: 1.15rem; }
+        .result-body p { min-height: 0; font-size: 0.9rem; }
+        .result-link { min-height: 44px; padding: 9px 14px; }
+      }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <a class="brand" href="./index.html#home" aria-label="The Cakery home">
+          <img src="./assets/cakery-logo-transparent.png" alt="The Cakery" />
+        </a>
+        <a class="back-link" href="./index.html#cakes">Back to cakes</a>
+      </header>
+
+      <section aria-labelledby="results-heading">
+        <span class="eyebrow">Cake brand search</span>
+        <h1 id="results-heading">Search results</h1>
+        <p class="intro" id="result-intro"></p>
+
+        <div class="result-section">
+          <p class="section-label">Searched brand</p>
+          <div class="result-grid" id="searched-result"></div>
+        </div>
+
+        <div class="recommendations">
+          <p class="section-label">Related brands you may like</p>
+          <div class="result-grid" id="recommendations"></div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        const brands = [
+          {
+            name: 'Theobroma',
+            description: 'Rich brownies, layered cakes and indulgent desserts.',
+            image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85'
+          },
+          {
+            name: 'Bakingo',
+            description: 'Celebration cakes, photo cakes and same-day surprises.',
+            image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=900&q=85'
+          },
+          {
+            name: 'CakeZone',
+            description: 'Fresh cakes and dessert boxes for every occasion.',
+            image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=85'
+          },
+          {
+            name: 'Mio Amore',
+            description: 'Everyday bakery favourites, pastries and celebration cakes.',
+            image: 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=900&q=85'
+          },
+          {
+            name: 'Ferns N Petals',
+            description: 'Gift-ready cakes and elegant designs for memorable moments.',
+            image: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=900&q=85'
+          },
+          {
+            name: 'Cheesecake & Co',
+            description: 'Creamy cheesecakes and modern dessert creations.',
+            image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85'
+          }
+        ];
+
+        const cakeImages = [
+          {
+            keywords: ['red velvet', 'velvet'],
+            image: 'https://images.unsplash.com/photo-1586788680434-30d324b2d46f?auto=format&fit=crop&w=900&q=85'
+          },
+          {
+            keywords: ['chocolate', 'choco', 'brownie'],
+            image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85'
+          },
+          {
+            keywords: ['cheesecake', 'cheese cake'],
+            image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=900&q=85'
+          },
+          {
+            keywords: ['strawberry', 'berry', 'fruit'],
+            image: 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=900&q=85'
+          },
+          {
+            keywords: ['vanilla', 'cream'],
+            image: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=900&q=85'
+          },
+          {
+            keywords: ['cupcake', 'cup cakes', 'muffin'],
+            image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85'
+          },
+          {
+            keywords: ['wedding', 'engagement'],
+            image: 'https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=900&q=85'
+          }
+        ];
+
+        const params = new URLSearchParams(window.location.search);
+        const rawQuery = params.get('q') || 'cake brands';
+        const query = rawQuery.trim();
+        const normalizedQuery = query.toLowerCase();
+        const match = brands.find((brand) => brand.name.toLowerCase().includes(normalizedQuery) || normalizedQuery.includes(brand.name.toLowerCase()));
+        const cakeMatch = cakeImages.find((cake) => cake.keywords.some((keyword) => normalizedQuery.includes(keyword)));
+        const searchedBrand = match ? {
+          ...match,
+          image: cakeMatch ? cakeMatch.image : match.image
+        } : cakeMatch ? {
+          name: query || 'Cake brands',
+          description: 'A cake result matched to your search. Explore similar favourites below.',
+          image: cakeMatch.image
+        } : {
+          name: query || 'Cake brands',
+          description: 'A cake brand result matching your search. Explore similar favourites below.',
+          image: brands[brands.length - 1].image
+        };
+        const recommendations = brands.filter((brand) => brand.name !== searchedBrand.name).slice(0, 3);
+
+        document.title = `${searchedBrand.name} search | The Cakery`;
+        document.querySelector('#results-heading').textContent = searchedBrand.name;
+        document.querySelector('#result-intro').textContent = match
+          ? `Here is the cake brand you searched for, with a few related options worth discovering.`
+          : `We found a result for your search and selected related cake brands to help you discover more.`;
+
+        function escapeHtml(value) {
+          return value.replace(/[&<>'"]/g, (character) => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            "'": '&#39;',
+            '"': '&quot;'
+          })[character]);
+        }
+
+        function cardTemplate(brand) {
+          return `<article class="result-card"><img src="${brand.image}" alt="${escapeHtml(brand.name)} cake selection" loading="lazy"><div class="result-body"><h2>${escapeHtml(brand.name)}</h2><p>${escapeHtml(brand.description)}</p><a class="result-link" href="./index.html#order">Enquire about cakes</a></div></article>`;
+        }
+
+        document.querySelector('#searched-result').innerHTML = cardTemplate(searchedBrand);
+        document.querySelector('#recommendations').innerHTML = recommendations.map(cardTemplate).join('');
+      })();
+    </script>
+  </body>
+</html>

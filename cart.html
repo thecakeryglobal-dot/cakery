@@ -1,0 +1,307 @@
+[<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Your cart at The Cakery." />
+    <title>Your Cart | The Cakery</title>
+    <style>
+      @font-face {
+        font-family: "Metropolis";
+        src: url("./assets/metropolis-regular.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+      }
+
+      :root {
+        --green-900: #04251c;
+        --green-800: #073b2d;
+        --beige-100: #fff9ef;
+        --beige-200: #f3e5ca;
+        --beige-300: #e7cf9d;
+        --text-soft: rgba(255, 250, 244, 0.78);
+        --text-muted: rgba(255, 250, 244, 0.62);
+        --border: rgba(255, 250, 244, 0.14);
+        --shadow: 0 24px 70px rgba(2, 15, 11, 0.28);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        background: radial-gradient(circle at 15% 10%, rgba(231, 207, 157, 0.12), transparent 28%), var(--green-900);
+        color: var(--beige-100);
+        font-family: "Metropolis", sans-serif;
+        line-height: 1.6;
+      }
+
+      a { color: inherit; text-decoration: none; }
+
+      .container {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .cart-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 28px 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .brand-mark {
+        display: block;
+        width: 170px;
+        height: auto;
+      }
+
+      .back-link {
+        color: var(--beige-200);
+        font-weight: 600;
+      }
+
+      main { padding: 76px 0 100px; }
+
+      .eyebrow {
+        color: var(--beige-300);
+        font-size: 0.75rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 12px 0 42px;
+        font-size: clamp(2.7rem, 6vw, 5.6rem);
+        line-height: 0.94;
+        letter-spacing: -0.07em;
+      }
+
+      .cart-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+        gap: 26px;
+        align-items: start;
+      }
+
+      .cart-items,
+      .cart-summary {
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.035);
+        box-shadow: var(--shadow);
+      }
+
+      .cart-items { overflow: hidden; }
+
+      .cart-item {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        align-items: center;
+        gap: 20px;
+        padding: 22px 24px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .cart-item:last-child { border-bottom: 0; }
+
+      .item-name { margin: 0; font-size: 1.15rem; }
+      .item-price { margin: 4px 0 0; color: var(--text-muted); font-size: 0.92rem; }
+      .item-total { color: var(--beige-200); font-weight: 700; white-space: nowrap; }
+
+      .remove-button {
+        border: 0;
+        background: transparent;
+        color: var(--text-muted);
+        cursor: pointer;
+        padding: 6px;
+      }
+
+      .remove-button:hover { color: var(--beige-100); }
+
+      .cart-summary { padding: 26px; }
+      .cart-summary h2 { margin: 0 0 22px; font-size: 1.35rem; }
+      .summary-row { display: flex; justify-content: space-between; gap: 16px; margin-top: 14px; color: var(--text-soft); }
+      .summary-total { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--beige-100); font-size: 1.2rem; font-weight: 700; }
+
+      .primary-button {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 26px;
+        padding: 14px 18px;
+        border: 0;
+        border-radius: 999px;
+        background: var(--beige-200);
+        color: var(--green-900);
+        cursor: pointer;
+        font-weight: 700;
+      }
+
+      .empty-state { padding: 48px 24px; text-align: center; color: var(--text-muted); }
+      .empty-state p { margin: 8px 0 24px; }
+
+      @media (max-width: 760px) {
+        main { padding-top: 52px; }
+        .cart-header { padding: 20px 0; }
+        .cart-layout { grid-template-columns: 1fr; }
+        .cart-item { grid-template-columns: 1fr auto; gap: 8px 14px; }
+        .item-total { grid-column: 2; grid-row: 1 / span 2; }
+        .remove-button { grid-column: 1; justify-self: start; }
+      }
+
+      @media (max-width: 430px) {
+        .container { width: min(1120px, calc(100% - 16px)); }
+        .cart-header { align-items: flex-start; flex-direction: column; }
+        .brand-mark { width: 140px; }
+        .primary-button { min-height: 48px; }
+      }
+
+      @media (max-width: 900px) {
+        .container { width: min(1120px, calc(100% - 24px)); }
+        main { padding: 56px 0 72px; }
+        h1 { margin-bottom: 30px; font-size: clamp(2.2rem, 8vw, 4rem); }
+        .cart-layout { gap: 18px; }
+        .cart-summary { padding: 22px; }
+      }
+
+      @media (max-width: 560px) {
+        .cart-header { align-items: flex-start; flex-direction: column; gap: 10px; padding: 18px 0; }
+        .brand-mark { width: 132px; }
+        main { padding: 42px 0 56px; }
+        h1 { margin: 10px 0 24px; font-size: clamp(2rem, 12vw, 3.2rem); }
+        .cart-items,
+        .cart-summary { border-radius: 18px; }
+        .cart-item { padding: 16px; gap: 6px 10px; }
+        .item-name { font-size: 1rem; overflow-wrap: anywhere; }
+        .item-price { font-size: 0.82rem; }
+        .item-total { font-size: 0.9rem; }
+        .cart-summary { padding: 18px; }
+        .summary-row { gap: 10px; font-size: 0.92rem; }
+        .primary-button { min-height: 48px; padding: 12px 14px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container cart-header">
+      <a class="brand" href="./index.html" aria-label="The Cakery home">
+        <img class="brand-mark" src="./assets/cakery-logo-transparent.png" alt="The Cakery" />
+      </a>
+      <a class="back-link" href="./index.html#cakes">Continue shopping</a>
+    </header>
+
+    <main class="container">
+      <span class="eyebrow">Freshly picked for you</span>
+      <h1>Your cart</h1>
+      <div class="cart-layout">
+        <section class="cart-items" aria-labelledby="cart-items-heading">
+          <h2 id="cart-items-heading" hidden>Cart items</h2>
+          <div id="cart-list"></div>
+        </section>
+        <aside class="cart-summary" aria-labelledby="summary-heading">
+          <h2 id="summary-heading">Order summary</h2>
+          <div class="summary-row"><span>Items</span><span id="item-count">0</span></div>
+          <div class="summary-row"><span>Subtotal</span><span id="subtotal">₹0</span></div>
+          <div class="summary-row summary-total"><span>Total</span><span id="total">₹0</span></div>
+          <button class="primary-button" type="button" id="checkout-button">Proceed to checkout</button>
+        </aside>
+      </div>
+    </main>
+
+    <script>
+      const cartKey = 'cakery-cart';
+      const params = new URLSearchParams(window.location.search);
+      const cart = JSON.parse(localStorage.getItem(cartKey) || '[]');
+      const productName = params.get('add');
+      const productPrice = Number(params.get('price')) || 0;
+
+      if (productName) {
+        const existingItem = cart.find((item) => item.name === productName);
+        if (existingItem) {
+          existingItem.quantity += 1;
+        } else {
+          cart.push({ name: productName, price: productPrice, quantity: 1 });
+        }
+        localStorage.setItem(cartKey, JSON.stringify(cart));
+        window.history.replaceState({}, document.title, './cart.html');
+      }
+
+      const cartList = document.querySelector('#cart-list');
+      const itemCount = document.querySelector('#item-count');
+      const subtotal = document.querySelector('#subtotal');
+      const total = document.querySelector('#total');
+      const checkoutButton = document.querySelector('#checkout-button');
+      const whatsappNumber = '918547553300';
+
+      function formatPrice(price) {
+        return price ? `₹${price.toLocaleString('en-IN')}` : 'Custom pricing';
+      }
+
+      function renderCart() {
+        const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+        const pricedTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+        itemCount.textContent = count;
+        subtotal.textContent = pricedTotal ? `₹${pricedTotal.toLocaleString('en-IN')}` : 'Custom pricing';
+        total.textContent = pricedTotal ? `₹${pricedTotal.toLocaleString('en-IN')}` : 'Custom pricing';
+
+        if (!cart.length) {
+          cartList.innerHTML = '<div class="empty-state"><strong>Your cart is waiting for something sweet.</strong><p>Add a cake from our collection to get started.</p><a class="back-link" href="./index.html#cakes">Browse cakes</a></div>';
+          checkoutButton.disabled = true;
+          checkoutButton.style.opacity = '0.5';
+          return;
+        }
+
+        checkoutButton.disabled = false;
+        checkoutButton.style.opacity = '1';
+        cartList.innerHTML = cart.map((item, index) => `
+          <article class="cart-item">
+            <div>
+              <h3 class="item-name">${item.name}</h3>
+              <p class="item-price">${formatPrice(item.price)} · Quantity ${item.quantity}</p>
+            </div>
+            <span class="item-total">${item.price ? `₹${(item.price * item.quantity).toLocaleString('en-IN')}` : 'Custom'}</span>
+            <button class="remove-button" type="button" data-index="${index}" aria-label="Remove ${item.name}">Remove</button>
+          </article>
+        `).join('');
+
+        cartList.querySelectorAll('.remove-button').forEach((button) => {
+          button.addEventListener('click', () => {
+            cart.splice(Number(button.dataset.index), 1);
+            localStorage.setItem(cartKey, JSON.stringify(cart));
+            renderCart();
+          });
+        });
+      }
+
+      checkoutButton.addEventListener('click', () => {
+        const orderLines = cart.map((item) => {
+          const lineTotal = item.price ? `₹${(item.price * item.quantity).toLocaleString('en-IN')}` : 'Custom pricing';
+          return `- ${item.name} x${item.quantity}: ${lineTotal}`;
+        });
+        const pricedTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+        const totalText = pricedTotal ? `₹${pricedTotal.toLocaleString('en-IN')}` : 'Custom pricing';
+        const message = [
+          'Hello The Cakery, I would like to place this order:',
+          ...orderLines,
+          `Total amount: ${totalText}`,
+          'Please share the payment details and confirm my order.'
+        ].join('\n');
+
+        window.location.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+      });
+
+      renderCart();
+    </script>
+  </body>
+</html>

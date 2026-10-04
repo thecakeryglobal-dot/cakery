@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Your wishlisted cakes from The Cakery." />
+    <title>Your Wishlist | The Cakery</title>
+    <style>
+      @font-face {
+        font-family: "Metropolis";
+        src: url("./assets/metropolis-regular.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+      }
+
+      :root {
+        --green-900: #04251c;
+        --green-800: #073b2d;
+        --beige-100: #fff9ef;
+        --beige-200: #f3e5ca;
+        --beige-300: #e7cf9d;
+        --text-soft: rgba(255, 250, 244, 0.78);
+        --text-muted: rgba(255, 250, 244, 0.62);
+        --border: rgba(255, 250, 244, 0.14);
+        --shadow: 0 24px 70px rgba(2, 15, 11, 0.28);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: radial-gradient(circle at 15% 10%, rgba(231, 207, 157, 0.12), transparent 28%), var(--green-900);
+        color: var(--beige-100);
+        font-family: "Metropolis", sans-serif;
+        line-height: 1.6;
+      }
+
+      a { color: inherit; text-decoration: none; }
+
+      .container {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .page-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 28px 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .brand img {
+        display: block;
+        width: 170px;
+        height: auto;
+      }
+
+      .back-link {
+        color: var(--beige-200);
+        font-weight: 600;
+      }
+
+      main {
+        padding: 64px 0 100px;
+      }
+
+      .eyebrow {
+        color: var(--beige-300);
+        font-size: 0.75rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 12px 0 42px;
+        font-size: clamp(2.7rem, 6vw, 5.6rem);
+        line-height: 0.94;
+        letter-spacing: -0.07em;
+      }
+
+      .wishlist-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .wishlist-card {
+        background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+        border: 1px solid rgba(243, 229, 202, 0.17);
+        border-radius: 26px;
+        overflow: hidden;
+        padding: 14px;
+      }
+
+      .wishlist-card img {
+        display: block;
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+        border-radius: 16px;
+      }
+
+      .wishlist-body {
+        padding: 16px 8px 10px;
+      }
+
+      .wishlist-body h2 {
+        margin: 0;
+        font-size: 1.35rem;
+        letter-spacing: -0.04em;
+      }
+
+      .wishlist-body p {
+        margin: 8px 0 18px;
+        color: rgba(255, 250, 244, 0.73);
+      }
+
+      .wishlist-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .wishlist-price {
+        color: var(--beige-200);
+        font-weight: 700;
+      }
+
+      .remove-btn {
+        border: 1px solid rgba(243, 229, 202, 0.24);
+        border-radius: 999px;
+        background: rgba(255,255,255,0.02);
+        color: var(--beige-100);
+        padding: 0.6rem 0.9rem;
+        cursor: pointer;
+      }
+
+      .empty-state {
+        padding: 30px 0;
+        color: var(--text-soft);
+      }
+
+      @media (max-width: 900px) {
+        .wishlist-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+
+      @media (max-width: 560px) {
+        .wishlist-grid { grid-template-columns: 1fr; }
+      }
+
+      @media (max-width: 430px) {
+        .container { width: min(1120px, calc(100% - 16px)); }
+        .page-header { align-items: flex-start; flex-direction: column; }
+        .brand img { width: 130px; }
+        .remove-btn { min-height: 44px; }
+      }
+
+      @media (max-width: 900px) {
+        .container { width: min(1120px, calc(100% - 24px)); }
+        main { padding: 52px 0 72px; }
+        h1 { margin-bottom: 30px; font-size: clamp(2.2rem, 8vw, 4rem); }
+        .wishlist-grid { gap: 16px; }
+        .wishlist-card { border-radius: 20px; padding: 10px; }
+        .wishlist-card img { height: clamp(170px, 28vw, 210px); }
+      }
+
+      @media (max-width: 560px) {
+        .page-header { align-items: flex-start; flex-direction: column; gap: 10px; padding: 18px 0; }
+        .brand img { width: 132px; }
+        main { padding: 42px 0 56px; }
+        h1 { margin: 10px 0 24px; font-size: clamp(2rem, 12vw, 3.2rem); }
+        .wishlist-grid { grid-template-columns: 1fr; gap: 14px; }
+        .wishlist-card { border-radius: 18px; padding: 10px; }
+        .wishlist-card img { height: clamp(190px, 58vw, 260px); border-radius: 12px; }
+        .wishlist-body { padding: 14px 6px 6px; }
+        .wishlist-body h2 { font-size: 1.15rem; }
+        .wishlist-body p { margin: 6px 0 14px; font-size: 0.9rem; }
+        .wishlist-meta { align-items: stretch; flex-wrap: wrap; }
+        .remove-btn { min-height: 44px; padding: 0.55rem 0.8rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container page-header">
+      <a class="brand" href="./index.html" aria-label="The Cakery home">
+        <img src="./assets/cakery-logo-transparent.png" alt="The Cakery" />
+      </a>
+      <a class="back-link" href="./index.html#bestsellers">Back to products</a>
+    </header>
+
+    <main class="container">
+      <span class="eyebrow">Saved favourites</span>
+      <h1>Wishlist</h1>
+
+      <div class="wishlist-grid" id="wishlist-grid"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        Your wishlist is empty. Add cakes you love and they will appear here.
+      </div>
+    </main>
+
+    <script>
+      (function () {
+        const key = 'cakery-wishlist';
+        const grid = document.querySelector('#wishlist-grid');
+        const emptyState = document.querySelector('#empty-state');
+
+        function getWishlist() {
+          try {
+            const saved = localStorage.getItem(key);
+            return saved ? JSON.parse(saved) : [];
+          } catch (error) {
+            return [];
+          }
+        }
+
+        function saveWishlist(items) {
+          localStorage.setItem(key, JSON.stringify(items));
+        }
+
+        function renderWishlist() {
+          const items = getWishlist();
+
+          if (!items.length) {
+            grid.innerHTML = '';
+            emptyState.hidden = false;
+            return;
+          }
+
+          emptyState.hidden = true;
+          grid.innerHTML = items.map((item) => `
+            <article class="wishlist-card">
+              <img src="${item.image || 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85'}" alt="${item.name}" loading="lazy" />
+              <div class="wishlist-body">
+                <h2>${item.name}</h2>
+                <p>Handcrafted with care for your next celebration.</p>
+                <div class="wishlist-meta">
+                  <span class="wishlist-price">${item.price || 'Custom'}</span>
+                  <button class="remove-btn" type="button" data-id="${item.id}">Remove</button>
+                </div>
+              </div>
+            </article>
+          `).join('');
+
+          grid.querySelectorAll('.remove-btn').forEach((button) => {
+            button.addEventListener('click', () => {
+              const remaining = getWishlist().filter((item) => item.id !== button.dataset.id);
+              saveWishlist(remaining);
+              renderWishlist();
+            });
+          });
+        }
+
+        renderWishlist();
+      })();
+    </script>
+  </body>
+</html>
