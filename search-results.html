@@ -1104,7 +1104,7 @@
               category:
                 categoryElement
                   ? categoryElement.textContent.trim()
-                  : "",
+                  : card.getAttribute("data-cake-category") || "",
 
               badge:
                 badgeElement
@@ -1526,6 +1526,11 @@
 
       function showLoadError() {
 
+        const errorMessage =
+          window.location.protocol === "file:"
+            ? "Open this page through a local web server (for example, VS Code Live Server). Browsers block loading products.html when this page is opened directly as a file."
+            : "Please make sure products.html is available in the same folder as search-results.html.";
+
         resultsContainer.innerHTML = `
 
           <div class="empty-state">
@@ -1539,10 +1544,7 @@
             </h2>
 
             <p>
-              Please make sure
-              <strong>products.html</strong>
-              is in the same folder as
-              <strong>search-results.html</strong>.
+              ${errorMessage}
             </p>
 
             <a
