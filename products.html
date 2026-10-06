@@ -2135,7 +2135,36 @@
         }
       });
     });
+    // ===============================
+// SEARCH PRODUCTS FROM URL
+// ===============================
+
+const urlParams = new URLSearchParams(window.location.search);
+const searchQuery = (urlParams.get("q") || "").trim().toLowerCase();
+
+if (searchQuery) {
+
+    const productCards = document.querySelectorAll(".product-card");
+
+    let foundProducts = 0;
+
+    productCards.forEach(card => {
+
+        const productText = card.textContent.toLowerCase();
+
+        if (productText.includes(searchQuery)) {
+            card.style.display = "";
+            foundProducts++;
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+    console.log(
+        `Search: "${searchQuery}" — ${foundProducts} product(s) found`
+    );
+}
   </script>
 </body>
-
 </html>
