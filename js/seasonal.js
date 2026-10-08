@@ -6,19 +6,38 @@
    * --------------------------------
    * Central system for seasonal campaigns.
    *
-   * Current stage:
-   * - Detects the active season
-   * - Applies a season identifier to <html>
-   * - Provides a safe foundation for future
-   *   hero, images, animations, colors, content
-   *   and offers.
+   * Current features:
+   * - Automatic seasonal detection foundation
+   * - India timezone support
+   * - URL-based testing
+   * - Manual override support
+   * - Normal fallback
+   * - Seasonal HTML class/data attribute
+   *
+   * Future features:
+   * - Hero videos
+   * - Hero images
+   * - Seasonal images
+   * - Decorations
+   * - Colors
+   * - Animations
+   * - Content
+   * - Offers
+   */
+
+
+  /*
+   * =========================================================
+   * SETTINGS
+   * =========================================================
    */
 
   const SEASONAL_SETTINGS = {
+
     /*
-     * Keep this as null for automatic mode.
+     * Keep this as null for normal operation.
      *
-     * For testing a season later, we can temporarily use:
+     * For development testing only, you can temporarily use:
      *
      * manualOverride: "onam"
      *
@@ -26,13 +45,23 @@
      */
     manualOverride: null,
 
+    /*
+     * The Cakery operates in India.
+     */
     timezone: "Asia/Kolkata"
+
   };
 
 
   /*
-   * APPROVED THE CAKERY SEASONAL CAMPAIGNS
+   * =========================================================
+   * SEASONAL CAMPAIGNS
+   * =========================================================
+   *
+   * The actual campaign dates will be added later
+   * after the creative team finalizes them.
    */
+
   const SEASONS = {
 
     normal: {
@@ -41,11 +70,13 @@
       dates: []
     },
 
+
     christmas: {
       name: "Christmas & New Year",
       enabled: false,
       dates: []
     },
+
 
     valentines: {
       name: "Valentine's Season",
@@ -53,11 +84,13 @@
       dates: []
     },
 
+
     ramadan: {
       name: "Ramadan",
       enabled: false,
       dates: []
     },
+
 
     vishu: {
       name: "Vishu",
@@ -65,11 +98,13 @@
       dates: []
     },
 
+
     bakrid: {
       name: "Bakrid",
       enabled: false,
       dates: []
     },
+
 
     independence: {
       name: "Independence Day",
@@ -77,11 +112,13 @@
       dates: []
     },
 
+
     onam: {
       name: "Onam",
       enabled: false,
       dates: []
     },
+
 
     diwali: {
       name: "Diwali",
@@ -93,9 +130,11 @@
 
 
   /*
-   * Get today's date according to
-   * India Standard Time.
+   * =========================================================
+   * INDIA DATE
+   * =========================================================
    */
+
   function getIndiaDate() {
 
     const formatter = new Intl.DateTimeFormat("en-CA", {
@@ -106,13 +145,16 @@
     });
 
     return formatter.format(new Date());
+
   }
 
 
   /*
-   * Check whether today's date falls
-   * inside a campaign period.
+   * =========================================================
+   * DATE RANGE CHECK
+   * =========================================================
    */
+
   function isDateInRange(date, start, end) {
 
     return date >= start && date <= end;
@@ -121,13 +163,81 @@
 
 
   /*
-   * Automatically detect the current season.
+   * =========================================================
+   * URL TESTING MODE
+   * =========================================================
+   *
+   * Examples:
+   *
+   * https://www.thecakery.in/?season=onam
+   * https://www.thecakery.in/?season=christmas
+   * https://www.thecakery.in/?season=diwali
+   *
+   * This is only for testing.
    */
+
+  function getTestingSeason() {
+
+    const params =
+      new URLSearchParams(window.location.search);
+
+    const requestedSeason =
+      params.get("season");
+
+
+    if (
+      requestedSeason &&
+      SEASONS[requestedSeason]
+    ) {
+
+      return requestedSeason;
+
+    }
+
+
+    return null;
+
+  }
+
+
+  /*
+   * =========================================================
+   * DETECT CURRENT SEASON
+   * =========================================================
+   */
+
   function detectSeason() {
 
+
     /*
-     * Manual testing mode.
+     * -------------------------------------------------------
+     * 1. URL TESTING MODE
+     * -------------------------------------------------------
+     *
+     * Example:
+     *
+     * ?season=onam
      */
+
+    const testingSeason =
+      getTestingSeason();
+
+
+    if (testingSeason) {
+
+      return testingSeason;
+
+    }
+
+
+    /*
+     * -------------------------------------------------------
+     * 2. MANUAL OVERRIDE
+     * -------------------------------------------------------
+     *
+     * Used only during development.
+     */
+
     if (
       SEASONAL_SETTINGS.manualOverride &&
       SEASONS[SEASONAL_SETTINGS.manualOverride]
@@ -138,20 +248,48 @@
     }
 
 
-    const today = getIndiaDate();
+    /*
+     * -------------------------------------------------------
+     * 3. AUTOMATIC DATE DETECTION
+     * -------------------------------------------------------
+     */
+
+    const today =
+      getIndiaDate();
 
 
     /*
      * Check every configured campaign.
      */
-    for (const [seasonKey, season] of Object.entries(SEASONS)) {
 
-      if (!season.enabled || !season.dates.length) {
+    for (
+      const [seasonKey, season]
+      of Object.entries(SEASONS)
+    ) {
+
+
+      /*
+       * Skip disabled campaigns.
+       */
+
+      if (
+        !season.enabled ||
+        !season.dates.length
+      ) {
+
         continue;
+
       }
 
 
-      for (const period of season.dates) {
+      /*
+       * Check each campaign period.
+       */
+
+      for (
+        const period
+        of season.dates
+      ) {
 
         if (
           isDateInRange(
@@ -171,69 +309,101 @@
 
 
     /*
-     * If no campaign is active,
-     * use the normal website.
+     * -------------------------------------------------------
+     * 4. NORMAL FALLBACK
+     * -------------------------------------------------------
+     *
+     * If no seasonal campaign is active,
+     * use the normal Cakery website.
      */
+
     return "normal";
 
   }
 
 
   /*
-   * Apply the detected season to
-   * the website root element.
+   * =========================================================
+   * APPLY SEASON
+   * =========================================================
    */
-  function applySeason(seasonKey) {
 
-    const season =
-      SEASONS[seasonKey] || SEASONS.normal;
+  function applySeason(seasonKey) {
 
 
     /*
-     * Add a data attribute.
+     * Make sure the requested season exists.
+     */
+
+    const season =
+      SEASONS[seasonKey] ||
+      SEASONS.normal;
+
+
+    /*
+     * -------------------------------------------------------
+     * DATA ATTRIBUTE
+     * -------------------------------------------------------
      *
      * Example:
      *
      * <html data-season="onam">
      */
+
     document.documentElement.dataset.season =
       seasonKey;
 
 
     /*
-     * Remove previously applied
-     * seasonal classes.
+     * -------------------------------------------------------
+     * REMOVE OLD SEASON CLASSES
+     * -------------------------------------------------------
      */
+
     document.documentElement.classList.remove(
+
       "season-normal",
+
       "season-christmas",
+
       "season-valentines",
+
       "season-ramadan",
+
       "season-vishu",
+
       "season-bakrid",
+
       "season-independence",
+
       "season-onam",
+
       "season-diwali"
+
     );
 
 
     /*
-     * Add the current season class.
+     * -------------------------------------------------------
+     * ADD CURRENT SEASON CLASS
+     * -------------------------------------------------------
      *
      * Example:
      *
      * <html class="season-onam">
      */
+
     document.documentElement.classList.add(
       `season-${seasonKey}`
     );
 
 
     /*
-     * Development information.
-     * This helps us verify the engine
-     * from the browser console.
+     * -------------------------------------------------------
+     * DEVELOPMENT LOG
+     * -------------------------------------------------------
      */
+
     console.log(
       `[The Cakery] Seasonal mode: ${season.name}`
     );
@@ -242,26 +412,46 @@
 
 
   /*
-   * Start the seasonal engine.
+   * =========================================================
+   * INITIALIZE ENGINE
+   * =========================================================
    */
+
   function initSeasonalEngine() {
+
+
+    /*
+     * Detect the current season.
+     */
 
     const currentSeason =
       detectSeason();
 
 
-    applySeason(currentSeason);
+    /*
+     * Apply the season.
+     */
+
+    applySeason(
+      currentSeason
+    );
 
 
     /*
-     * Make the seasonal engine available
-     * globally for future development.
+     * -------------------------------------------------------
+     * GLOBAL ACCESS
+     * -------------------------------------------------------
+     *
+     * Makes the engine available for future development.
      */
+
     window.TheCakerySeasonal = {
 
       currentSeason,
 
       seasons: SEASONS,
+
+      detectSeason,
 
       applySeason
 
@@ -271,10 +461,14 @@
 
 
   /*
-   * Safely initialize after the HTML
-   * document is ready.
+   * =========================================================
+   * START ENGINE SAFELY
+   * =========================================================
    */
-  if (document.readyState === "loading") {
+
+  if (
+    document.readyState === "loading"
+  ) {
 
     document.addEventListener(
       "DOMContentLoaded",
