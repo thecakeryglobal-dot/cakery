@@ -1182,38 +1182,25 @@
         background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
       }
 
-      .opening-hours-heading {
-  margin: 0 0 26px;
-  color: var(--beige-100);
-  text-align: center;
-  font-size: clamp(1.6rem, 3.4vw, 2.75rem);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 1.1;
-  white-space: nowrap;
-}
+      .opening-hours {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        min-height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        padding: clamp(22px, 4vw, 48px);
+      }
 
       .opening-hours-heading {
         margin: 0 0 26px;
         color: var(--beige-100);
         text-align: center;
-        font-size: clamp(2.3rem, 5vw, 4.5rem);
+        font-size: clamp(1.6rem, 3.4vw, 2.75rem);
         font-weight: 800;
-        letter-spacing: -0.07em;
-        line-height: 0.9;
-        text-transform: uppercase;
-      }
-
-      .opening-hours-heading span {
-        display: block;
-        margin-top: 4px;
-        color: var(--beige-200);
-        font-family: "Metropolis", sans-serif;
-        font-size: 0.72em;
-        font-style: italic;
-        font-weight: 400;
         letter-spacing: -0.04em;
-        text-transform: none;
+        line-height: 1.1;
+        white-space: nowrap;
       }
 
       .opening-hours-list {
@@ -2594,7 +2581,7 @@
             <div class="contact-map" aria-labelledby="opening-hours-title">
               <div class="map-circles"></div>
               <div class="opening-hours">
-                <h3 class="opening-hours-heading" id="opening-hours-title">Opening<span>Hours</span></h3>
+                <h3 class="opening-hours-heading" id="opening-hours-title">Opening Hours</h3>
                 <ul class="opening-hours-list" aria-label="Opening hours, every day">
                   <li><strong>Monday</strong><span>9:00 AM - 1:00 AM</span></li>
                   <li><strong>Tuesday</strong><span>9:00 AM - 1:00 AM</span></li>
@@ -2943,7 +2930,7 @@
 
   <!-- WhatsApp Official Brand Icon -->
   <a
-    href="https://wa.me/+918547553300"
+    href="https://wa.me/8547553300"
     class="social-icon"
     target="_blank"
     rel="noopener noreferrer"
