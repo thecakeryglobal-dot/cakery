@@ -554,7 +554,7 @@
       }
 
       .section {
-        padding: 120px 0;
+        padding: 80px 0;
       }
 
       .section-head {
@@ -1169,6 +1169,93 @@
         background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
       }
 
+      .opening-hours {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        min-height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        padding: clamp(22px, 4vw, 48px);
+      }
+
+      .opening-hours-heading {
+        margin: 0 0 26px;
+        color: var(--beige-100);
+        text-align: center;
+        font-size: clamp(2.3rem, 5vw, 4.5rem);
+        font-weight: 800;
+        letter-spacing: -0.07em;
+        line-height: 0.9;
+        text-transform: uppercase;
+      }
+
+      .opening-hours-heading span {
+        display: block;
+        margin-top: 4px;
+        color: var(--beige-200);
+        font-family: "Metropolis", sans-serif;
+        font-size: 0.72em;
+        font-style: italic;
+        font-weight: 400;
+        letter-spacing: -0.04em;
+        text-transform: none;
+      }
+
+      .opening-hours-list {
+        display: grid;
+        gap: 9px;
+        width: min(100%, 520px);
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+      }
+
+      .opening-hours-list li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        min-height: 46px;
+        overflow: hidden;
+        border-radius: 999px;
+        background: rgba(255, 249, 239, 0.88);
+        color: var(--green-900);
+        transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+      }
+
+      .opening-hours-list strong,
+      .opening-hours-list span {
+        padding: 9px 18px;
+        font-size: clamp(0.88rem, 1.6vw, 1rem);
+      }
+
+      @media (hover: hover) {
+        .opening-hours-list li:hover {
+          transform: translateY(-3px) scale(1.015);
+          background: var(--beige-100);
+          box-shadow: 0 10px 24px rgba(2, 15, 11, 0.22);
+        }
+
+        .opening-hours-list li:hover strong {
+          background: var(--beige-400);
+        }
+      }
+
+      .opening-hours-list strong {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        border-radius: 999px;
+        background: var(--beige-300);
+        font-weight: 600;
+        transition: background-color 220ms ease;
+      }
+
+      .opening-hours-list time {
+        text-align: center;
+        white-space: nowrap;
+      }
+
       .map-circles {
         position: absolute;
         inset: 0;
@@ -1734,7 +1821,7 @@
         }
 
         .section {
-          padding: 72px 0;
+          padding: 64px 0;
         }
 
         .section-head h2,
@@ -1812,7 +1899,7 @@
         }
 
         .section {
-          padding: 64px 0;
+          padding: 48px 0;
         }
 
         .eyebrow {
@@ -2254,29 +2341,27 @@
         <div class="container about-grid">
           <div class="about-copy">
             <span class="eyebrow">About the cakery</span>
-            <h2 id="about-heading">Made for moments worth remembering.</h2>
+            <h2 id="about-heading">What Is The Cakery?</h2>
             <p>
-              The Cakery began in Kannur with a simple goal to make every celebration more special with fresh, delicious cakes. What started with a love for baking has grown into a place where people can find cakes and treats for every occasion.
+              The Cakery is a bakery in Kerala, run by The Borma & Co. We started with our first branch in Kannur and later opened a second branch in Taliparamba. The Kannur branch sells cakes, small snacks and jar cakes.
             </p>
             <p>
-              From birthday, wedding, and anniversary cakes to custom designs, pastries, brownies, cupcakes, snacks, and more, we have something for every celebration and craving.
-              We use quality ingredients and prepare every product with care. With our multiple delivery vehicles.
+              The Taliparamba branch has a bigger space and a wider range of cakes and snacks. We make birthday, wedding, anniversary and custom cakes, and we also sell pastries, brownies, cupcakes and shakes.
             </p>
             <p>
-              we also offer safe and timely cake delivery within a 20 km radius.
-              Proudly operating under The Borma & Co, we continue to grow with a focus on great taste, fresh bakes, creative cakes, and happy customers.'.
+              We use quality ingredients and prepare each order fresh. We have several delivery vehicles, so we can handle many deliveries at once, and delivery is free within 20 km. To order, call or WhatsApp <a href="tel:+91 8547553300">+91 8547553300</a> with the cake, flavour, size, date and delivery address.
             </p>
             <div class="stats" aria-label="The Cakery highlights">
               <div class="stat">
-                <strong>20km</strong>
+                <strong class="count-value" data-target="20" data-suffix="km">0km</strong>
                 <span>Free delivery range</span>
               </div>
               <div class="stat">
-                <strong>100%</strong>
+                <strong class="count-value" data-target="100" data-suffix="%">0%</strong>
                 <span>Freshly prepared</span>
               </div>
               <div class="stat">
-                <strong>1000+</strong>
+                <strong class="count-value" data-target="1000" data-suffix="+">0+</strong>
                 <span>Happy customers</span>
               </div>
             </div>
@@ -2383,60 +2468,60 @@
           <div class="faq-list" aria-label="Frequently asked questions">
             <div class="faq-item open">
               <button class="faq-question" type="button" aria-expanded="true">
-                <span>Where is The Cakery located?</span>
+                <span>Where are your branches located?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
               <div class="faq-answer" style="max-height: 180px;">
                 <div class="faq-answer-inner">
-                  The Cakery is located in Taliparamba, Kannur. The Cakery originally started its journey in Kannur and has now expanded to Taliparamba.
+                  We have two branches. The kannur branch is at SN park rd, Kannur, kerala 670001. The taliparamba branch is at velapuram, keralam taliparamba 670141.
                 </div>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-question" type="button" aria-expanded="false">
-                <span>Which areas do you deliver to?</span>
+                <span>What types of cakes do you make?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
               <div class="faq-answer">
                 <div class="faq-answer-inner">
-                  We deliver within a 20 km radius of The Cakery, Taliparamba. You can contact us with your location to confirm delivery availability.
+                  We make birthday cakes, wedding cakes, anniversary cakes and custom cakes in many flavours, including chocolate, Black Forest, strawberry, blueberry and Snickers. You can see the full list on our products page.
                 </div>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-question" type="button" aria-expanded="false">
-                <span>Do you provide cake delivery?</span>
+                <span>How do I order a cake?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
               <div class="faq-answer">
                 <div class="faq-answer-inner">
-                  Yes, we provide cake delivery within a 20 km radius. We have multiple delivery vehicles to help us deliver cakes safely and on time.
+                  Call or WhatsApp +91 85475 53300 with the cake, flavour, size, date and delivery address. We confirm your order in the same chat or call.
                 </div>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-question" type="button" aria-expanded="false">
-                <span>How can I place an order?</span>
+                <span>Is delivery free?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
               <div class="faq-answer">
                 <div class="faq-answer-inner">
-                  You can contact The Cakery directly to place your order. Share the cake you want, your preferred flavour and size, delivery details, and any customisation requirements.
+                  Yes, delivery is free within 20 km of our branches. Send your area on WhatsApp, and we will confirm if it is within the free range.
                 </div>
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-question" type="button" aria-expanded="false">
-                <span>What types of cakes does The Cakery offer?</span>
+                <span>Do you sell snacks and jar cakes?</span>
                 <span class="faq-icon" aria-hidden="true"></span>
               </button>
               <div class="faq-answer">
                 <div class="faq-answer-inner">
-                  We offer a wide variety of cakes, including birthday cakes, wedding cakes, anniversary cakes, and special occasion cakes. Our menu includes both traditional and innovative flavours to suit every taste.
+                  Yes. We sell small snacks and jar cakes at the Kannur branch, and a wider range of snacks and cakes at the Taliparamba branch.
                 </div>
               </div>
             </div>
@@ -2455,7 +2540,7 @@
 
           <div class="contact-grid">
             <div class="contact-card">
-              <p class="eyebrow">Kannur, Kerala</p>
+              <!-- <p class="eyebrow">Kannur, Kerala</p> -->
               <img class="contact-card-logo" src="./assets/cakery-logo-transparent.png" alt="The Cakery" />
               <div class="contact-list">
                 <div class="contact-item">
@@ -2481,15 +2566,26 @@
               </div>
             </div>
 
-            <div class="contact-map" aria-label="Location map placeholder">
+            <div class="contact-map" aria-labelledby="opening-hours-title">
               <div class="map-circles"></div>
-              <img class="contact-map-logo" src="./assets/cakery-logo-transparent.png" alt="The Cakery logo" loading="lazy" />
+              <div class="opening-hours">
+                <h3 class="opening-hours-heading" id="opening-hours-title">Opening<span>Hours</span></h3>
+                <ul class="opening-hours-list" aria-label="Opening hours, every day">
+                  <li><strong>Monday</strong><span>9:00 AM - 1:00 AM</span></li>
+                  <li><strong>Tuesday</strong><span>9:00 AM - 1:00 AM</span></li>
+                  <li><strong>Wednesday</strong><span>9:00 AM - 1:00 AM</span></li>
+                  <li><strong>Thursday</strong><span>9:00 AM - 1:00 AM</span></li>
+                  <li><strong>Friday</strong><span>9:00 AM - 1:00 AM</span></li>
+                  <li><strong>Saturday</strong><span>9:00 AM - 1:00 AM</span></li>
+                  <li><strong>Sunday</strong><span>9:00 AM - 1:00 AM</span></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="order" class="section" aria-labelledby="order-heading" style="padding-top: 12px;">
+      <section id="order" class="section" aria-labelledby="order-heading">
         <div class="container">
           <div class="order-panel">
             <span class="eyebrow" style="color: var(--green-900);">Let's plan your celebration</span>
@@ -2497,7 +2593,7 @@
             <p>
               From custom cakes to freshly baked treats, we're here to make your special moments even more memorable. Tell us what you are celebrating, and let The Cakery create something delicious for you.
             </p>
-            <a href="#contact" class="primary-btn">Order Your Cake</a>
+            <a href="tel:+918547553300" class="primary-btn">Order Your Cake</a>
           </div>
         </div>
       </section>
@@ -2509,7 +2605,8 @@
           <a href="#home" class="brand" aria-label="The Cakery home">
             <img class="brand-logo" src="./assets/cakery-logo-transparent.png" alt="The Cakery" />
           </a>
-          <p>Premium cakes, pastries, snacks and bakery treats in Kannur. Proudly under The Borma &amp; Co.</p>
+          <p>Premium cakes, pastries, snacks and bakery treats in Kannur.
+          <p>Proudly under The Borma &amp; Co.</p>
           <div class="socials" aria-label="Social links">
             <a href="https://www.instagram.com/the_cakery.in?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" aria-label="Instagram">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -2552,7 +2649,7 @@
 
         <div>
           <h3 style="margin: 0 0 14px; font-size: 1.1rem;">Location</h3>
-          <p><a href="https://www.google.com/maps/place/The+Cakery/@11.8709391,75.3581511,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba43d001789dff7:0xc208d4a071e9db2e!8m2!3d11.8709339!4d75.360726!16s%2Fg%2F11njfgp162?authuser=0&entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer" aria-label="Location">Kannur, Kerala</a></p>
+          <p><a href="https://www.google.com/maps/place/The+Cakery/@11.8709391,75.3581511,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba43d001789dff7:0xc208d4a071e9db2e!8m2!3d11.8709339!4d75.360726!16s%2Fg%2F11njfgp162?authuser=0&entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer" aria-label="Location">Kannur</a></p>
           <p><a href="https://www.google.com/maps/place/The+Cakery,+Taliparamba/@12.0418126,75.3616029,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba43f002e11816b:0x3c5f12e0c2ec7258!8m2!3d12.0418074!4d75.3641778!16s%2Fg%2F11zdbv_xpz?authuser=0&entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer" aria-label="Location">Taliparamba</a></p>
           <p><a href="#" target="_blank" rel="noreferrer" aria-label="Location">Pappinisseri</a></p>
           <p><a href="mailto:thecakeryglobal@gmail.com" target="_blank" rel="noreferrer" aria-label="Email">thecakeryglobal@gmail.com</a></p>
@@ -2691,6 +2788,49 @@
             }
           });
         });
+
+        const counterElements = document.querySelectorAll('.count-value');
+
+        function animateCounter(element) {
+          if (!element) return;
+
+          const target = Number(element.dataset.target || 0);
+          const suffix = element.dataset.suffix || '';
+          const duration = 1400;
+          const startTime = performance.now();
+
+          function updateCounter(currentTime) {
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const value = Math.round(target * eased);
+
+            element.textContent = `${value}${suffix}`;
+
+            if (progress < 1) {
+              requestAnimationFrame(updateCounter);
+            }
+          }
+
+          requestAnimationFrame(updateCounter);
+        }
+
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          counterElements.forEach((element) => {
+            const target = Number(element.dataset.target || 0);
+            const suffix = element.dataset.suffix || '';
+            element.textContent = `${target}${suffix}`;
+          });
+        } else {
+          const counterObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              animateCounter(entry.target);
+              observer.unobserve(entry.target);
+            });
+          }, { threshold: 0.45 });
+
+          counterElements.forEach((element) => counterObserver.observe(element));
+        }
 
         const wishlistKey = 'cakery-wishlist';
 
