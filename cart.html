@@ -293,15 +293,15 @@
         const pricedTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
         const totalText = pricedTotal ? `₹${pricedTotal.toLocaleString('en-IN')}` : 'Custom pricing';
         const message = [
-          'Hello The Cakery! ✨',
+          'Hello The Cakery!',
           '',
           'I’d like to place an order for the following:',
           '',
-          '🎂 *Order Details*',
+          'Order Details',
           ...orderLines,
-          `*Total Amount: ${totalText}*`,
+          `Total Amount: ${totalText}`,
           '',
-          '📍 *Delivery Details*',
+          '• Delivery Details',
           '• Name:',
           '• Phone Number:',
           '• Delivery Address:',
@@ -309,7 +309,7 @@
           '',
           'Kindly share the payment details and confirm my order.',
           '',
-          '*Looking forward to enjoying your delicious cake!* 🍰'
+          'Looking forward to enjoying your delicious cake!'
         ].join('\n');
 
         window.location.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
