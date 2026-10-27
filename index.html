@@ -22,14 +22,39 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": "https://thecakery.in/#webpage",
-  "url": "https://thecakery.in/",
-  "name": "The Cakery | Premium Cakes in Kannur",
-  "primaryImageOfPage": {
-    "@type": "ImageObject",
-    "url": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/cakery_banner"
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://thecakery.in/#org",
+      "name": "The Cakery",
+      "parentOrganization": {"@type": "Organization", "name": "The Borma & Co."},
+      "url": "https://thecakery.in/",
+      "email": "thecakeryglobal@gmail.com",
+      "telephone": "+91-8547553300",
+      "sameAs": ["https://www.instagram.com/the_cakery.in/"]
+    },
+    {
+      "@type": "Bakery",
+      "name": "The Cakery Kannur",
+      "parentOrganization": {"@id": "https://thecakery.in/#org"},
+      "url": "https://thecakery.in/",
+      "telephone": "+91-8547553300",
+      "priceRange": "₹₹",
+      "servesCuisine": "Cakes, Bakery",
+      "address": {"@type": "PostalAddress", "streetAddress": "SN Park Road", "addressLocality": "Kannur", "addressRegion": "Kerala", "postalCode": "670001", "addressCountry": "IN"},
+      "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "09:00", "closes": "01:00"}]
+    },
+    {
+      "@type": "Bakery",
+      "name": "The Cakery Taliparamba",
+      "parentOrganization": {"@id": "https://thecakery.in/#org"},
+      "url": "https://thecakery.in/",
+      "telephone": "+91-8547553300",
+      "priceRange": "₹₹",
+      "servesCuisine": "Cakes, Bakery",
+      "address": {"@type": "PostalAddress", "streetAddress": "Velapuram", "addressLocality": "Taliparamba", "addressRegion": "Kerala", "postalCode": "670141", "addressCountry": "IN"}
+    }
+  ]
 }
 </script>
     <title>Best Cakes in Kannur | Custom Birthday Cakes | The Cakery</title>
