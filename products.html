@@ -2547,6 +2547,16 @@
         }
       });
     });
+
+    // In-page links scroll smoothly without adding #section to the URL
+    document.addEventListener('click', (event) => {
+      const link = event.target.closest('a[href^="#"]');
+      if (!link) return;
+      const target = document.getElementById(link.getAttribute('href').slice(1));
+      if (!target) return;
+      event.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    });
   </script>
   <!-- Floating Social Icons -->
   <div class="social-float">
