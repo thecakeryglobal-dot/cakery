@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="./assets/Cakery-fav-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="description" content="Search products from The Cakery, Kannur.">
@@ -13,7 +14,7 @@
   <style>
     @font-face {
       font-family: "Metropolis";
-      src: url("./assets/metropolis-regular.woff2") format("woff2");
+      src: url("./assets/Fonts Used/metropolis-regular.woff2") format("woff2");
       font-display: swap;
     }
 
@@ -638,7 +639,7 @@
 
       <a
         class="logo"
-        href="./index.html
+        href="./index.html"
         aria-label="The Cakery Home"
       >
 
@@ -654,16 +655,16 @@
 
         <a
           class="header-link"
-          href="./products.html
+          href="./products.html"
         >
-          ÃƒÂ¢Ã¢â‚¬Â Ã‚Â All Products
+          ← All Products
         </a>
 
         <a
           class="header-link"
-          href="./cart.html
+          href="./cart.html"
         >
-          Cart ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢
+          Cart →
         </a>
 
       </div>
@@ -676,7 +677,7 @@
     <section>
 
       <span class="eyebrow">
-        The Cakery Ãƒâ€šÂ· Kannur
+        The Cakery · Kannur
       </span>
 
       <h1 id="page-title">
@@ -774,7 +775,7 @@
 
       This page reads the REAL product cards from:
 
-          /products
+          ./products.html
 
       Therefore:
 
@@ -916,7 +917,7 @@
 
 
       /* -----------------------------------------------
-         LOAD PRODUCTS FROM /products
+         LOAD PRODUCTS FROM ./products.html
       ------------------------------------------------ */
 
       async function getProducts() {
@@ -933,7 +934,7 @@
         if (!response.ok) {
 
           throw new Error(
-            "Could not load /products"
+            "Could not load ./products.html"
           );
 
         }
@@ -957,7 +958,7 @@
         /*
           IMPORTANT:
 
-          Your /products uses:
+          Your ./products.html uses:
 
           .product-card
 
@@ -1124,7 +1125,7 @@
                   ? orderElement.getAttribute(
                       "href"
                     )
-                  : "/#order"
+                  : "/"
 
             };
 
@@ -1394,7 +1395,7 @@
 
         const orderLink =
           product.orderLink ||
-          "/#order";
+          "/";
 
 
         return `
@@ -1494,7 +1495,7 @@
           <div class="empty-state">
 
             <div class="empty-icon">
-              ÃƒÂ°Ã…Â¸Ã‚ÂÃ‚Â°
+              🍰
             </div>
 
             <h2>
@@ -1506,13 +1507,6 @@
               "${escapeHTML(query)}".
               Try searching using the exact product name.
             </p>
-
-            <a
-              class="products-button"
-              href="./products.html
-            >
-              View All Products
-            </a>
 
           </div>
 
@@ -1529,15 +1523,15 @@
 
         const errorMessage =
           window.location.protocol === "file:"
-            ? "Open this page through a local web server (for example, VS Code Live Server). Browsers block loading /products when this page is opened directly as a file."
-            : "Please make sure /products is available in the same folder as /search-results.";
+            ? "Open this page through a local web server (for example, VS Code Live Server). Browsers block loading ./products.html when this page is opened directly as a file."
+            : "Please make sure ./products.html is available in the same folder as /search-results.";
 
         resultsContainer.innerHTML = `
 
           <div class="empty-state">
 
             <div class="empty-icon">
-              ÃƒÂ¢Ã…Â¡Ã‚Â ÃƒÂ¯Ã‚Â¸Ã‚Â
+              ⚠️
             </div>
 
             <h2>
@@ -1550,7 +1544,7 @@
 
             <a
               class="products-button"
-              href="./products.html
+              href="./products.html"
             >
               Open Products
             </a>
@@ -1633,7 +1627,7 @@
 
 
         /*
-          NO PRODUCTS FOUND IN /products
+          NO PRODUCTS FOUND IN ./products.html
         */
 
         if (
@@ -1644,7 +1638,7 @@
             "No Products";
 
           introText.textContent =
-            "No product cards were found in /products.";
+            "No product cards were found in ./products.html.";
 
           resultCount.textContent =
             "0 products";
@@ -1758,7 +1752,7 @@
 
           The image here comes directly
           from the SAME product card
-          in /products.
+          in ./products.html.
         */
 
         resultsContainer.innerHTML =

@@ -1,7 +1,8 @@
-[<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="./assets/Cakery-fav-icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Your cart at The Cakery." />
     <title>Your Cart | The Cakery</title>
@@ -9,7 +10,7 @@
     <style>
       @font-face {
         font-family: "Metropolis";
-        src: url("./assets/metropolis-regular.woff2") format("woff2");
+        src: url("./assets/Fonts Used/metropolis-regular.woff2") format("woff2");
         font-style: normal;
         font-weight: 100 900;
         font-display: swap;
@@ -223,7 +224,25 @@
     <script>
       const cartKey = 'cakery-cart';
       const params = new URLSearchParams(window.location.search);
-      const cart = JSON.parse(localStorage.getItem(cartKey) || '[]');
+      let cart = [];
+      try {
+        const savedCart = JSON.parse(localStorage.getItem(cartKey) || '[]');
+        cart = Array.isArray(savedCart)
+          ? savedCart.filter((item) =>
+              item &&
+              typeof item.name === 'string' &&
+              Number.isFinite(Number(item.price)) &&
+              Number.isInteger(Number(item.quantity)) &&
+              Number(item.quantity) > 0
+            ).map((item) => ({
+              name: item.name.trim().slice(0, 120),
+              price: Math.max(0, Number(item.price)),
+              quantity: Math.max(1, Number(item.quantity))
+            }))
+          : [];
+      } catch (error) {
+        cart = [];
+      }
       const productName = params.get('add');
       const productPrice = Number(params.get('price')) || 0;
 
@@ -249,6 +268,16 @@
         return price ? `₹${price.toLocaleString('en-IN')}` : 'Custom pricing';
       }
 
+      function escapeHTML(value) {
+        return String(value).replace(/[&<>"']/g, (character) => ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#39;'
+        })[character]);
+      }
+
       function renderCart() {
         const count = cart.reduce((sum, item) => sum + item.quantity, 0);
         const pricedTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -268,11 +297,11 @@
         cartList.innerHTML = cart.map((item, index) => `
           <article class="cart-item">
             <div>
-              <h3 class="item-name">${item.name}</h3>
+              <h3 class="item-name">${escapeHTML(item.name)}</h3>
               <p class="item-price">${formatPrice(item.price)} · Quantity ${item.quantity}</p>
             </div>
             <span class="item-total">${item.price ? `₹${(item.price * item.quantity).toLocaleString('en-IN')}` : 'Custom'}</span>
-            <button class="remove-button" type="button" data-index="${index}" aria-label="Remove ${item.name}">Remove</button>
+            <button class="remove-button" type="button" data-index="${index}" aria-label="Remove ${escapeHTML(item.name)}">Remove</button>
           </article>
         `).join('');
 
