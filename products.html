@@ -1421,14 +1421,24 @@
 
     .cart-link {
       display: inline-flex;
+      width: 44px;
+      height: 44px;
       align-items: center;
-      gap: 8px;
-      padding: 9px 14px;
+      justify-content: center;
+      padding: 0;
       border: 1px solid rgba(243, 229, 202, 0.24);
       border-radius: 999px;
       color: var(--beige-100);
-      font-size: 0.9rem;
-      font-weight: 600;
+    }
+
+    .cart-link svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.7;
     }
 
     .cart-link:hover,
@@ -2015,7 +2025,13 @@
       </a>
       <div class="header-actions">
         <a class="text-link" href="./index.html#cakes">Back to home</a>
-        <a class="cart-link" href="./cart.html" aria-label="View your cart">Cart <span aria-hidden="true">→</span></a>
+        <a class="cart-link" href="./cart.html" aria-label="View your cart">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.4L21 8H6" />
+            <circle cx="10" cy="19" r="1" />
+            <circle cx="18" cy="19" r="1" />
+          </svg>
+        </a>
       </div>
     </div>
   </header>
@@ -2033,6 +2049,7 @@
       <a href="#cakes">Cakes</a>
       <a href="#white-based-cakes">White Based Cakes</a>
       <a href="#snacks">Snacks</a>
+      <a href="#jar-cakes">Jar Cakes</a>
       <a href="#desserts">Desserts</a>
       <a href="#drinks">Drinks</a>
     </nav>
@@ -2956,10 +2973,10 @@
       </div>
     </section>
 
-    <!-- DESSERTS SECTION -->
-    <section class="product-section" id="desserts" aria-labelledby="desserts-title">
+    <!-- JAR CAKES SECTION -->
+    <section class="product-section" id="jar-cakes" aria-labelledby="jar-cakes-title">
       <div class="section-heading">
-        <h2 id="desserts-title">Jar Cakes</h2>
+        <h2 id="jar-cakes-title">Jar Cakes</h2>
         <p>Layered indulgence in every spoonful, freshly prepared.</p>
       </div>
 
@@ -3100,6 +3117,376 @@
             <div class="product-actions">
               <a class="order-link" href="tel:+918547553300">Order</a>
               <a class="add-button" href="./cart.html?add=Dubai%20Chocolate%20Jar%20Cake&amp;price=300">Add to cart</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="product-section" id="desserts" aria-labelledby="desserts-title">
+      <div class="section-heading">
+        <h2 id="desserts-title">Desserts</h2>
+        <p>Sweet treats, ice creams and toppings made for every craving.</p>
+      </div>
+
+      <div class="category-grid" id="dessert-products" role="region" aria-label="Dessert products">
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image"
+              src="./assets/View%20all%20Products/caremal%20fudged.jpeg"
+              alt="Molten Cookie dessert by The Cakery" loading="lazy" decoding="async" />
+            <span class="category-tag">Dessert</span>
+          </div>
+          <div class="product-info">
+            <div class="product-title-row">
+              <h3>Molten Cookie</h3><span class="price">₹250</span>
+            </div>
+            <p>A warm cookie dessert with a rich molten centre.</p>
+            <div class="product-actions">
+              <a class="order-link" href="tel:+918547553300">Order</a>
+              <a class="add-button" href="./cart.html?add=Molten%20Cookie&amp;price=250">Add to cart</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image"
+              src="./assets/View%20all%20Products/pistachio%20cheese%20cake.png"
+              alt="Longy Pistachio dessert by The Cakery" loading="lazy" decoding="async" />
+            <span class="category-tag">Dessert</span>
+          </div>
+          <div class="product-info">
+            <div class="product-title-row">
+              <h3>Longy Pistachio</h3><span class="price">₹190</span>
+            </div>
+            <p>A creamy pistachio treat with a delicate, nutty flavour.</p>
+            <div class="product-actions">
+              <a class="order-link" href="tel:+918547553300">Order</a>
+              <a class="add-button" href="./cart.html?add=Longy%20Pistachio&amp;price=190">Add to cart</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image"
+              src="./assets/View%20all%20Products/pistachio%20cheese%20cake.png"
+              alt="Pistachio Tacos dessert by The Cakery" loading="lazy" decoding="async" />
+            <span class="category-tag">Dessert</span>
+          </div>
+          <div class="product-info">
+            <div class="product-title-row">
+              <h3>Pistachio Tacos</h3><span class="price">₹300</span>
+            </div>
+            <p>Crisp dessert tacos with a rich pistachio filling.</p>
+            <div class="product-actions">
+              <a class="order-link" href="tel:+918547553300">Order</a>
+              <a class="add-button" href="./cart.html?add=Pistachio%20Tacos&amp;price=300">Add to cart</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image"
+              src="./assets/View%20all%20Products/chocolate%20cake.png"
+              alt="Chocolate Tacos dessert by The Cakery" loading="lazy" decoding="async" />
+            <span class="category-tag">Dessert</span>
+          </div>
+          <div class="product-info">
+            <div class="product-title-row">
+              <h3>Chocolate Tacos</h3><span class="price">₹300</span>
+            </div>
+            <p>Crisp dessert tacos filled with chocolate and finished with sauce.</p>
+            <div class="product-actions">
+              <a class="order-link" href="tel:+918547553300">Order</a>
+              <a class="add-button" href="./cart.html?add=Chocolate%20Tacos&amp;price=300">Add to cart</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image"
+              src="./assets/View%20all%20Products/lotus%20cake.jpeg"
+              alt="Lotus Tacos dessert by The Cakery" loading="lazy" decoding="async" />
+            <span class="category-tag">Dessert</span>
+          </div>
+          <div class="product-info">
+            <div class="product-title-row">
+              <h3>Lotus Tacos</h3><span class="price">₹250</span>
+            </div>
+            <p>Crisp dessert tacos with smooth Lotus-flavoured filling.</p>
+            <div class="product-actions">
+              <a class="order-link" href="tel:+918547553300">Order</a>
+              <a class="add-button" href="./cart.html?add=Lotus%20Tacos&amp;price=250">Add to cart</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image"
+              src="./assets/View%20all%20Products/Chocolate%20Pecan%20Crunch%20Cake.png"
+              alt="Choco Crunch dessert by The Cakery" loading="lazy" decoding="async" />
+            <span class="category-tag">Dessert</span>
+          </div>
+          <div class="product-info">
+            <div class="product-title-row">
+              <h3>Choco Crunch</h3><span class="price">₹380</span>
+            </div>
+            <p>A crunchy chocolate dessert with a rich, indulgent finish.</p>
+            <div class="product-actions">
+              <a class="order-link" href="tel:+918547553300">Order</a>
+              <a class="add-button" href="./cart.html?add=Choco%20Crunch&amp;price=380">Add to cart</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image"
+              src="./assets/View%20all%20Products/Fresh%20strawberry%20cake.jpeg"
+              alt="Strawberry Tacos dessert by The Cakery" loading="lazy" decoding="async" />
+            <span class="category-tag">Dessert</span>
+          </div>
+          <div class="product-info">
+            <div class="product-title-row">
+              <h3>Strawberry Tacos</h3><span class="price">₹300</span>
+            </div>
+            <p>Crisp dessert tacos paired with sweet strawberry flavour.</p>
+            <div class="product-actions">
+              <a class="order-link" href="tel:+918547553300">Order</a>
+              <a class="add-button" href="./cart.html?add=Strawberry%20Tacos&amp;price=300">Add to cart</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image"
+              src="./assets/View%20all%20Products/choco%20fudged.png"
+              alt="Lava dessert by The Cakery" loading="lazy" decoding="async" />
+            <span class="category-tag">Dessert</span>
+          </div>
+          <div class="product-info">
+            <div class="product-title-row">
+              <h3>Lava</h3><span class="price">₹280</span>
+            </div>
+            <p>A warm chocolate dessert with a soft, flowing centre.</p>
+            <div class="product-actions">
+              <a class="order-link" href="tel:+918547553300">Order</a>
+              <a class="add-button" href="./cart.html?add=Lava&amp;price=280">Add to cart</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image"
+              src="./assets/View%20all%20Products/Lemon%20curd%20cake.jpeg"
+              alt="Lemon Cake dessert by The Cakery" loading="lazy" decoding="async" />
+            <span class="category-tag">Dessert</span>
+          </div>
+          <div class="product-info">
+            <div class="product-title-row">
+              <h3>Lemon Cake</h3><span class="price">₹250</span>
+            </div>
+            <p>A light, soft cake with a bright lemon flavour.</p>
+            <div class="product-actions">
+              <a class="order-link" href="tel:+918547553300">Order</a>
+              <a class="add-button" href="./cart.html?add=Lemon%20Cake&amp;price=250">Add to cart</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image"
+              src="./assets/View%20all%20Products/dark%20belgium.png"
+              alt="Chocolate Noir dessert by The Cakery" loading="lazy" decoding="async" />
+            <span class="category-tag">Dessert</span>
+          </div>
+          <div class="product-info">
+            <div class="product-title-row">
+              <h3>Chocolate Noir</h3><span class="price">₹480</span>
+            </div>
+            <p>A rich chocolate dessert finished with a decadent topping.</p>
+            <div class="product-actions">
+              <a class="order-link" href="tel:+918547553300">Order</a>
+              <a class="add-button" href="./cart.html?add=Chocolate%20Noir&amp;price=480">Add to cart</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image"
+              src="./assets/View%20all%20Products/Fresh%20strawberry%20cake.jpeg"
+              alt="Strawberry Noir dessert by The Cakery" loading="lazy" decoding="async" />
+            <span class="category-tag">Dessert</span>
+          </div>
+          <div class="product-info">
+            <div class="product-title-row">
+              <h3>Strawberry Noir</h3><span class="price">₹250</span>
+            </div>
+            <p>A chocolate dessert balanced with sweet strawberry flavour.</p>
+            <div class="product-actions">
+              <a class="order-link" href="tel:+918547553300">Order</a>
+              <a class="add-button" href="./cart.html?add=Strawberry%20Noir&amp;price=250">Add to cart</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image"
+              src="./assets/View%20all%20Products/Fresh%20Fruit%20Salad.png"
+              alt="Brownie Ice Cream dessert by The Cakery" loading="lazy" decoding="async" />
+            <span class="category-tag">Ice Cream</span>
+          </div>
+          <div class="product-info">
+            <div class="product-title-row">
+              <h3>Brownie Ice Cream</h3><span class="price">₹270</span>
+            </div>
+            <p>A chilled ice cream dessert served with a rich chocolate brownie.</p>
+            <div class="product-actions">
+              <a class="order-link" href="tel:+918547553300">Order</a>
+              <a class="add-button" href="./cart.html?add=Brownie%20Ice%20Cream&amp;price=270">Add to cart</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image"
+              src="./assets/View%20all%20Products/Tiramisu%20cake.jpeg"
+              alt="Tiramisu Ice Cream dessert by The Cakery" loading="lazy" decoding="async" />
+            <span class="category-tag">Ice Cream</span>
+          </div>
+          <div class="product-info">
+            <div class="product-title-row">
+              <h3>Tiramisu Ice Cream</h3><span class="price">₹250</span>
+            </div>
+            <p>Creamy ice cream with the classic flavour of tiramisu.</p>
+            <div class="product-actions">
+              <a class="order-link" href="tel:+918547553300">Order</a>
+              <a class="add-button" href="./cart.html?add=Tiramisu%20Ice%20Cream&amp;price=250">Add to cart</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image"
+              src="./assets/View%20all%20Products/pinapple%20milk%20cake.jpeg"
+              alt="Full Me Up Milk Cake dessert by The Cakery" loading="lazy" decoding="async" />
+            <span class="category-tag">Milk Cake</span>
+          </div>
+          <div class="product-info">
+            <div class="product-title-row">
+              <h3>Full Me Up Milk Cake</h3><span class="price">₹250</span>
+            </div>
+            <p>A moist milk cake layered with a creamy topping.</p>
+            <div class="product-actions">
+              <a class="order-link" href="tel:+918547553300">Order</a>
+              <a class="add-button" href="./cart.html?add=Full%20Me%20Up%20Milk%20Cake&amp;price=250">Add to cart</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image"
+              src="./assets/View%20all%20Products/matcha%20strawberry%20cake.jpeg"
+              alt="Strawberry Pistachio dessert by The Cakery" loading="lazy" decoding="async" />
+            <span class="category-tag">Dessert</span>
+          </div>
+          <div class="product-info">
+            <div class="product-title-row">
+              <h3>Strawberry Pistachio</h3><span class="price">₹450</span>
+            </div>
+            <p>A fruity strawberry dessert with a delicate pistachio finish.</p>
+            <div class="product-actions">
+              <a class="order-link" href="tel:+918547553300">Order</a>
+              <a class="add-button" href="./cart.html?add=Strawberry%20Pistachio&amp;price=450">Add to cart</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image"
+              src="./assets/View%20all%20Products/chocolate%20cake.png"
+              alt="Milk chocolate topping by The Cakery" loading="lazy" decoding="async" />
+            <span class="category-tag">Topping</span>
+          </div>
+          <div class="product-info">
+            <div class="product-title-row">
+              <h3>Milk Chocolate Topping</h3><span class="price">₹70</span>
+            </div>
+            <p>Add a smooth milk chocolate topping to your dessert.</p>
+            <div class="product-actions">
+              <a class="order-link" href="tel:+918547553300">Order</a>
+              <a class="add-button" href="./cart.html?add=Milk%20Chocolate%20Topping&amp;price=70">Add to cart</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image"
+              src="./assets/View%20all%20Products/nuetalla%20cheese%20cake.png"
+              alt="Nutella topping by The Cakery" loading="lazy" decoding="async" />
+            <span class="category-tag">Topping</span>
+          </div>
+          <div class="product-info">
+            <div class="product-title-row">
+              <h3>Nutella Topping</h3><span class="price">₹100</span>
+            </div>
+            <p>Add a rich hazelnut chocolate topping to your dessert.</p>
+            <div class="product-actions">
+              <a class="order-link" href="tel:+918547553300">Order</a>
+              <a class="add-button" href="./cart.html?add=Nutella%20Topping&amp;price=100">Add to cart</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image"
+              src="./assets/View%20all%20Products/pistachio%20cheese%20cake.png"
+              alt="Pistachio topping by The Cakery" loading="lazy" decoding="async" />
+            <span class="category-tag">Topping</span>
+          </div>
+          <div class="product-info">
+            <div class="product-title-row">
+              <h3>Pistachio Topping</h3><span class="price">₹100</span>
+            </div>
+            <p>Add a crunchy pistachio topping to your dessert.</p>
+            <div class="product-actions">
+              <a class="order-link" href="tel:+918547553300">Order</a>
+              <a class="add-button" href="./cart.html?add=Pistachio%20Topping&amp;price=100">Add to cart</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image"
+              src="./assets/View%20all%20Products/white%20almond.png"
+              alt="White chocolate topping by The Cakery" loading="lazy" decoding="async" />
+            <span class="category-tag">Topping</span>
+          </div>
+          <div class="product-info">
+            <div class="product-title-row">
+              <h3>White Chocolate Topping</h3><span class="price">₹70</span>
+            </div>
+            <p>Add a smooth white chocolate topping to your dessert.</p>
+            <div class="product-actions">
+              <a class="order-link" href="tel:+918547553300">Order</a>
+              <a class="add-button" href="./cart.html?add=White%20Chocolate%20Topping&amp;price=70">Add to cart</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img class="product-image"
+              src="./assets/View%20all%20Products/Fresh%20Fruit%20Salad.png"
+              alt="Vanilla ice cream topping by The Cakery" loading="lazy" decoding="async" />
+            <span class="category-tag">Topping</span>
+          </div>
+          <div class="product-info">
+            <div class="product-title-row">
+              <h3>Ice Cream Vanilla</h3><span class="price">₹60</span>
+            </div>
+            <p>Add a scoop of vanilla ice cream to your dessert.</p>
+            <div class="product-actions">
+              <a class="order-link" href="tel:+918547553300">Order</a>
+              <a class="add-button" href="./cart.html?add=Ice%20Cream%20Vanilla&amp;price=60">Add to cart</a>
             </div>
           </div>
         </article>

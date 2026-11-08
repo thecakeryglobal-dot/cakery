@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Choose between The Cakery cake menu and dessert menu in Kannur." />
+    <link rel="canonical" href="https://thecakery.in/menu.html" />
+    <link rel="icon" href="./assets/Cakery-fav-icon.png" />
+    <title>Our Menus | The Cakery</title>
+    <style>
+      @font-face {
+        font-family: "Metropolis";
+        src: url("./assets/Fonts Used/metropolis-regular.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+      }
+
+      :root {
+        color-scheme: dark;
+        --green-900: #04251c;
+        --green-800: #073b2d;
+        --beige-100: #fff9ef;
+        --beige-200: #f3e5ca;
+        --text-soft: rgba(255, 250, 244, 0.72);
+        --border: rgba(255, 250, 244, 0.14);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        background:
+          radial-gradient(ellipse at 50% 25%, rgba(19, 91, 67, 0.48), transparent 55%),
+          var(--green-900);
+        color: var(--beige-100);
+        font-family: "Metropolis", sans-serif;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page-shell {
+        width: min(1120px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        min-height: 92px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .brand img {
+        display: block;
+        width: clamp(138px, 18vw, 190px);
+        height: auto;
+      }
+
+      .back-link {
+        color: var(--text-soft);
+        transition: color 200ms ease;
+      }
+
+      .back-link:hover,
+      .back-link:focus-visible {
+        color: var(--beige-100);
+      }
+
+      main {
+        padding: clamp(56px, 9vw, 100px) 0 80px;
+      }
+
+      .intro {
+        max-width: 650px;
+        margin: 0 auto 44px;
+        text-align: center;
+      }
+
+      .eyebrow {
+        color: var(--beige-200);
+        font-size: 0.76rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 12px 0;
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+        font-weight: 500;
+        letter-spacing: -0.06em;
+        line-height: 1;
+      }
+
+      .intro p {
+        margin: 0;
+        color: var(--text-soft);
+        font-size: 1.05rem;
+      }
+
+      .menu-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+      }
+
+      .menu-button {
+        display: inline-flex;
+        min-height: 56px;
+        align-items: center;
+        justify-content: center;
+        padding: 0.85rem 1.6rem;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        background: var(--beige-200);
+        color: var(--green-900);
+        font-size: 1rem;
+        font-weight: 600;
+        transition: transform 200ms ease, background 200ms ease;
+      }
+
+      .menu-button:hover,
+      .menu-button:focus-visible {
+        transform: translateY(-2px);
+        background: var(--beige-100);
+      }
+
+      .menu-button:focus-visible,
+      .back-link:focus-visible {
+        outline: 2px solid var(--beige-100);
+        outline-offset: 4px;
+      }
+
+      @media (max-width: 680px) {
+        .site-header {
+          min-height: 76px;
+        }
+
+        .menu-actions {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .menu-button {
+          width: min(100%, 320px);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="./index.html" aria-label="The Cakery home">
+          <img src="./assets/cakery-logo-transparent.png" alt="The Cakery" />
+        </a>
+        <a class="back-link" href="./index.html">Back to home</a>
+      </header>
+
+      <main>
+        <div class="intro">
+          <span class="eyebrow">The Cakery Kannur</span>
+          <h1>Download your menu</h1>
+          <p>Explore our celebration cakes or browse the desserts you love.</p>
+        </div>
+
+        <div class="menu-actions" role="group" aria-label="Download a menu">
+          <a class="menu-button" href="./assets/Cakery%20Menu/Cakery-Menu.pdf" download="Cakery-Menu.pdf">Download Cake's Menu</a>
+          <a class="menu-button" href="./assets/Dessert%20Menu/Dessert-Menu.pdf" download="Dessert-Menu.pdf">Download Dessert Menu</a>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
