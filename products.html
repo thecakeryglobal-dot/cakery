@@ -14,1300 +14,3542 @@
   "@graph": [
     {
       "@type": "Bakery",
-      "@id": "https://thecakery.in/#organization",
+      "@id": "https://thecakery.in/#bakery",
       "name": "The Cakery",
       "url": "https://thecakery.in/",
-      "logo": "https://thecakery.in/assets/cakery-logo-transparent.png",
-      "image": "https://thecakery.in/assets/cakery-logo-transparent.png",
-      "description": "Premium cakes, pastries, snacks and bakery treats in Kannur.",
-      "telephone": "+91-8547553300",
-      "email": "thecakeryglobal@gmail.com",
-      "priceRange": "₹40 - ₹2000",
-      "servesCuisine": [
-        "Bakery",
-        "Desserts",
-        "Cakes"
-      ],
-      "currenciesAccepted": "INR",
+      "telephone": "+91 8547553300",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Kannur",
         "addressRegion": "Kerala",
         "addressCountry": "IN"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 11.8709339,
-        "longitude": 75.360726
-      },
-      "areaServed": [
-        "Kannur",
-        "Taliparamba",
-        "Pappinisseri"
-      ],
-      "parentOrganization": {
-        "@type": "Organization",
-        "name": "The Borma & Co."
-      },
-      "sameAs": [
-        "https://www.instagram.com/the_cakery.in",
-        "https://www.facebook.com/share/1Kf7zpr5Tp/"
-      ]
+      "priceRange": "₹40 - ₹2000"
     },
     {
-      "@type": "WebSite",
-      "@id": "https://thecakery.in/#website",
-      "url": "https://thecakery.in/",
-      "name": "The Cakery",
-      "publisher": {
-        "@id": "https://thecakery.in/#organization"
-      }
-    },
-    {
-      "@type": "CollectionPage",
-      "@id": "https://thecakery.in/products.html#webpage",
-      "url": "https://thecakery.in/products.html",
-      "name": "Cakes, Jar Cakes & Snacks in Kannur | The Cakery",
-      "description": "Browse cakes, jar cakes, snacks & shakes from The Cakery, Kannur. Prices from ₹170. Order on WhatsApp with free delivery within 20 km.",
-      "isPartOf": {
-        "@id": "https://thecakery.in/#website"
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#chocolate-cake",
+      "name": "Chocolate Cake",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/chocolate_cake",
+      "description": "Chocolate Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Chocolate Cakes",
+      "sku": "TC-001",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
       },
-      "about": {
-        "@id": "https://thecakery.in/#organization"
-      },
-      "breadcrumb": {
-        "@id": "https://thecakery.in/products.html#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://thecakery.in/products.html#itemlist"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://thecakery.in/products.html#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://thecakery.in/"
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "700.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
         },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "All Products",
-          "item": "https://thecakery.in/products.html"
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
         }
-      ]
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#choco-cashew",
+      "name": "Choco Cashew",
+      "image": "https://res.cloudinary.com/zfzl9mjq/image/upload/f_auto,q_auto/choco_cashew",
+      "description": "Choco Cashew from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Chocolate Cakes",
+      "sku": "TC-002",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "900.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#oreo-chocolate-cake",
+      "name": "Oreo Chocolate Cake",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/oreo_cake",
+      "description": "Oreo Chocolate Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Chocolate Cakes",
+      "sku": "TC-003",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "900.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#chocolate-truffle-cake",
+      "name": "Chocolate Truffle Cake",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/choco_truffle",
+      "description": "Chocolate Truffle Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Chocolate Cakes",
+      "sku": "TC-004",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "1100.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#choco-almond-cake",
+      "name": "Choco Almond Cake",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/choco_almond",
+      "description": "Choco Almond Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Chocolate Cakes",
+      "sku": "TC-005",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "1100.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#choco-citrus-cake",
+      "name": "Choco Citrus Cake",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/choco_citrus",
+      "description": "Choco Citrus Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Chocolate Cakes",
+      "sku": "TC-006",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "1200.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#banofee-noir-cake",
+      "name": "Banofee Noir Cake",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Luxurious_Chocolate_Banana_Spiral_Cake",
+      "description": "Banofee Noir Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Chocolate Cakes",
+      "sku": "TC-007",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "1300.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#dry-fruit-chocolate-cake",
+      "name": "Dry-Fruit Chocolate Cake",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/dry_fruit",
+      "description": "Dry-Fruit Chocolate Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Chocolate Cakes",
+      "sku": "TC-008",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "1400.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#opera-chocolate-cake",
+      "name": "Opera Chocolate Cake",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Luxurious_Opera_Cake_on_Green_Satin",
+      "description": "Opera Chocolate Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Chocolate Cakes",
+      "sku": "TC-009",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "1400.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#hazelnut-cake",
+      "name": "Hazelnut Cake",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/huzel_nut",
+      "description": "Hazelnut Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Chocolate Cakes",
+      "sku": "TC-010",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "1500.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#lotus-biscoff-chocolate",
+      "name": "Lotus Biscoff Chocolate",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Glossy_Biscoff_Cake_on_Marble_Stand",
+      "description": "Lotus Biscoff Chocolate from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Chocolate Cakes",
+      "sku": "TC-011",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "1500.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#ferrero-rocher-cake",
+      "name": "Ferrero Rocher Cake",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/ferroro_rocher",
+      "description": "Ferrero Rocher Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Chocolate Cakes",
+      "sku": "TC-012",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "1600.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#choco-fudge-cake",
+      "name": "Choco Fudge Cake",
+      "image": "https://res.cloudinary.com/zfzl9mjq/image/upload/f_auto,q_auto/choco_fudged",
+      "description": "Choco Fudge Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Chocolate Cakes",
+      "sku": "TC-013",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "1800.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#dark-belgium-cake",
+      "name": "Dark Belgium Cake",
+      "image": "https://res.cloudinary.com/zfzl9mjq/image/upload/f_auto,q_auto/dark_belgium",
+      "description": "Dark Belgium Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Chocolate Cakes",
+      "sku": "TC-014",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "2000.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#dubai-chocolate-cake",
+      "name": "Dubai Chocolate Cake",
+      "image": "https://res.cloudinary.com/zfzl9mjq/image/upload/f_auto,q_auto/dubai_choco_cake",
+      "description": "Dubai Chocolate Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Chocolate Cakes",
+      "sku": "TC-015",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "2000.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#choco-pista",
+      "name": "Choco Pista",
+      "image": "https://res.cloudinary.com/zfzl9mjq/image/upload/f_auto,q_auto/choco_pista",
+      "description": "Choco Pista from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Chocolate Cakes",
+      "sku": "TC-016",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "2000.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#irish-coffee-cake",
+      "name": "Irish Coffee Cake",
+      "image": "https://res.cloudinary.com/zfzl9mjq/image/upload/f_auto,q_auto/irish_coffiee",
+      "description": "Irish Coffee Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Chocolate Cakes",
+      "sku": "TC-017",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "1200.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#german-chocolate",
+      "name": "German Chocolate",
+      "image": "https://thecakery.in/assets/german-chocolate-cake.png",
+      "description": "German Chocolate from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Chocolate Cakes",
+      "sku": "TC-018",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "1500.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#vancho-cake",
+      "name": "Vancho Cake",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/vancho_cake",
+      "description": "Vancho Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "White Based Cakes",
+      "sku": "TC-019",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "1000.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#triple-chocolate-mousse",
+      "name": "Triple Chocolate Mousse",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/tripple_chocolate_mousse",
+      "description": "Triple Chocolate Mousse from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "White Based Cakes",
+      "sku": "TC-020",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "1700.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#kulfi-cake",
+      "name": "Kulfi Cake",
+      "image": "https://res.cloudinary.com/nhzcvnqi/image/upload/f_auto,q_auto/81052",
+      "description": "Kulfi Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "White Based Cakes",
+      "sku": "TC-021",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "1200.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#butter-beef-puff",
+      "name": "Butter Beef Puff",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Butter_Beef_Puff",
+      "description": "Butter Beef Puff from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Snacks",
+      "sku": "TC-022",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "40.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#loaded-beef-bun",
+      "name": "Loaded Beef Bun",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Loaded_Beef_Bun",
+      "description": "Loaded Beef Bun from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Snacks",
+      "sku": "TC-023",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "60.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#beef-quiche",
+      "name": "Beef Quiche",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Beef_Quiche",
+      "description": "Beef Quiche from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Snacks",
+      "sku": "TC-024",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "60.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#chicken-quiche",
+      "name": "Chicken Quiche",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Chicken_Quiche",
+      "description": "Chicken Quiche from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Snacks",
+      "sku": "TC-025",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "60.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#egg-mayo-sandwich",
+      "name": "Egg Mayo Sandwich",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Egg_Mayo_Sandwich",
+      "description": "Egg Mayo Sandwich from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Snacks",
+      "sku": "TC-026",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "70.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#prime-beef-roll",
+      "name": "Prime Beef Roll",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Prime_Beef_Roll",
+      "description": "Prime Beef Roll from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Snacks",
+      "sku": "TC-027",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "80.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#chicken-mayo-sandwich",
+      "name": "Chicken Mayo Sandwich",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Chicken_Mayo_Sandwich",
+      "description": "Chicken Mayo Sandwich from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Snacks",
+      "sku": "TC-028",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "80.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#korean-cheese-bun",
+      "name": "Korean Cheese Bun",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Korean_Cheese_Bun",
+      "description": "Korean Cheese Bun from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Snacks",
+      "sku": "TC-029",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "80.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#pineapple-jar-cake",
+      "name": "Pineapple Jar Cake",
+      "image": "https://res.cloudinary.com/zfzl9mjq/image/upload/f_auto,q_auto/pinapple_jar_cake",
+      "description": "Pineapple Jar Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Jar Cakes",
+      "sku": "TC-030",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "170.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#mango-jar-cake",
+      "name": "Mango Jar Cake",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/mango_jar_cake",
+      "description": "Mango Jar Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Jar Cakes",
+      "sku": "TC-031",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "180.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#fresh-fruit-jar-cake",
+      "name": "Fresh Fruit Jar Cake",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Fresh_fruit_jar_cajke",
+      "description": "Fresh Fruit Jar Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Jar Cakes",
+      "sku": "TC-032",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "220.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#lotus-jar-cake",
+      "name": "Lotus Jar Cake",
+      "image": "https://res.cloudinary.com/zfzl9mjq/image/upload/f_auto,q_auto/lotus_jar_cake",
+      "description": "Lotus Jar Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Jar Cakes",
+      "sku": "TC-033",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "250.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#snickers-jar-cake",
+      "name": "Snickers Jar Cake",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Snickers_Jar_cake",
+      "description": "Snickers Jar Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Jar Cakes",
+      "sku": "TC-034",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "260.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#tender-jar-cake",
+      "name": "Tender Jar Cake",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/tender_jar_cake",
+      "description": "Tender Jar Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Jar Cakes",
+      "sku": "TC-035",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "260.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#dubai-chocolate-jar-cake",
+      "name": "Dubai Chocolate Jar Cake",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/dubai_choco_jar_cake",
+      "description": "Dubai Chocolate Jar Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Jar Cakes",
+      "sku": "TC-036",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "300.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#molten-cookie",
+      "name": "Molten Cookie",
+      "image": "https://thecakery.in/assets/dessert-cards/dessert-card-12.jpg",
+      "description": "Molten Cookie from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Desserts",
+      "sku": "TC-037",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "250.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#london-pistachio",
+      "name": "London Pistachio",
+      "image": "https://thecakery.in/assets/dessert-cards/dessert-card-14.jpg",
+      "description": "London Pistachio from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Desserts",
+      "sku": "TC-038",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "190.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#pistachio-tacos",
+      "name": "Pistachio Tacos",
+      "image": "https://thecakery.in/assets/dessert-cards/dessert-card-06.jpg",
+      "description": "Pistachio Tacos from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Desserts",
+      "sku": "TC-039",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "300.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#chocolate-tacos",
+      "name": "Chocolate Tacos",
+      "image": "https://thecakery.in/assets/dessert-cards/dessert-card-09.jpg",
+      "description": "Chocolate Tacos from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Desserts",
+      "sku": "TC-040",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "300.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#lotus-tacos",
+      "name": "Lotus Tacos",
+      "image": "https://thecakery.in/assets/dessert-cards/dessert-card-03.jpg",
+      "description": "Lotus Tacos from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Desserts",
+      "sku": "TC-041",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "250.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#pull-me-up-milk-cake",
+      "name": "Pull Me Up Milk Cake",
+      "image": "https://thecakery.in/assets/dessert-cards/dessert-card-07.jpg",
+      "description": "Pull Me Up Milk Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Desserts",
+      "sku": "TC-042",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "250.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#strawberry-tacos",
+      "name": "Strawberry Tacos",
+      "image": "https://thecakery.in/assets/dessert-cards/dessert-card-15.jpg",
+      "description": "Strawberry Tacos from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Desserts",
+      "sku": "TC-043",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "300.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#lava",
+      "name": "Lava",
+      "image": "https://thecakery.in/assets/dessert-cards/dessert-card-05.jpg",
+      "description": "Lava from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Desserts",
+      "sku": "TC-044",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "360.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#london-cake",
+      "name": "London Cake",
+      "image": "https://thecakery.in/assets/dessert-cards/dessert-card-11.jpg",
+      "description": "London Cake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Desserts",
+      "sku": "TC-045",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "250.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#chocolate-noir",
+      "name": "Chocolate Noir",
+      "image": "https://thecakery.in/assets/dessert-cards/dessert-card-13.jpg",
+      "description": "Chocolate Noir from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Desserts",
+      "sku": "TC-046",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "480.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#strawberry-noir",
+      "name": "Strawberry Noir",
+      "image": "https://thecakery.in/assets/dessert-cards/dessert-card-04.jpg",
+      "description": "Strawberry Noir from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Desserts",
+      "sku": "TC-047",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "250.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#brownie-ice-cream",
+      "name": "Brownie Ice Cream",
+      "image": "https://thecakery.in/assets/dessert-cards/dessert-card-10.jpg",
+      "description": "Brownie Ice Cream from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Desserts",
+      "sku": "TC-048",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "270.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#truffle-with-ice-cream",
+      "name": "Truffle with Ice Cream",
+      "image": "https://thecakery.in/assets/dessert-cards/dessert-card-02.jpg",
+      "description": "Truffle with Ice Cream from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Desserts",
+      "sku": "TC-049",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "250.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#choco-crunch",
+      "name": "Choco Crunch",
+      "image": "https://thecakery.in/assets/dessert-cards/dessert-card-08.jpg",
+      "description": "Choco Crunch from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Desserts",
+      "sku": "TC-050",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "380.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#strawberry-pistachio",
+      "name": "Strawberry Pistachio",
+      "image": "https://thecakery.in/assets/dessert-cards/dessert-card-01.jpg",
+      "description": "Strawberry Pistachio from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Desserts",
+      "sku": "TC-051",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "450.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#chikoo-shake",
+      "name": "Chikoo Shake",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Chikoo_shake",
+      "description": "Chikoo Shake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Drinks",
+      "sku": "TC-052",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "155.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#avocado-smoothie",
+      "name": "Avocado Smoothie",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Avacado_Smoothi",
+      "description": "Avocado Smoothie from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Drinks",
+      "sku": "TC-053",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "160.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#mango-shake",
+      "name": "Mango Shake",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Mango_shake",
+      "description": "Mango Shake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Drinks",
+      "sku": "TC-054",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "165.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://thecakery.in/products.html#custard-apple-shake",
+      "name": "Custard Apple Shake",
+      "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Custurd_apple",
+      "description": "Custard Apple Shake from The Cakery, Kannur. Order on WhatsApp with free delivery within 20 km.",
+      "category": "Drinks",
+      "sku": "TC-055",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Cakery"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://thecakery.in/products.html",
+        "price": "175.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://thecakery.in/#bakery"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "INR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IN",
+            "addressRegion": "Kerala"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      }
     },
     {
       "@type": "ItemList",
-      "@id": "https://thecakery.in/products.html#itemlist",
-      "name": "All Products – The Cakery Kannur",
-      "numberOfItems": 45,
+      "name": "The Cakery Products",
+      "url": "https://thecakery.in/products.html",
+      "numberOfItems": 55,
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#chocolate-cake",
-            "name": "Chocolate Cake",
-            "description": "Chocolate sponge with fresh cream and a cherry on top.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/chocolate_cake",
-            "url": "https://thecakery.in/products.html#chocolate-cake",
-            "sku": "TC-001",
-            "category": "Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#chocolate-cake",
-              "priceCurrency": "INR",
-              "price": "700",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#chocolate-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#choco-cashew",
-            "name": "Choco Cashew",
-            "description": "Chocolate layers with crunchy cashew nuts around the sides.",
-            "image": "https://res.cloudinary.com/zfzl9mjq/image/upload/f_auto,q_auto/choco_cashew",
-            "url": "https://thecakery.in/products.html#choco-cashew",
-            "sku": "TC-002",
-            "category": "Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#choco-cashew",
-              "priceCurrency": "INR",
-              "price": "900",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#choco-cashew"
           }
         },
         {
           "@type": "ListItem",
           "position": 3,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#oreo-chocolate-cake",
-            "name": "Oreo Chocolate Cake",
-            "description": "Rich chocolate cake with Oreo cookies blended in.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/oreo_cake",
-            "url": "https://thecakery.in/products.html#oreo-chocolate-cake",
-            "sku": "TC-003",
-            "category": "Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#oreo-chocolate-cake",
-              "priceCurrency": "INR",
-              "price": "900",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#oreo-chocolate-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 4,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#chocolate-truffle-cake",
-            "name": "Chocolate Truffle Cake",
-            "description": "Dark chocolate sponge with whipped cream and a smooth truffle top.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/choco_truffle",
-            "url": "https://thecakery.in/products.html#chocolate-truffle-cake",
-            "sku": "TC-004",
-            "category": "Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#chocolate-truffle-cake",
-              "priceCurrency": "INR",
-              "price": "1100",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#chocolate-truffle-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 5,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#choco-almond-cake",
-            "name": "Choco Almond Cake",
-            "description": "Rich cocoa layers with crunchy almonds and creamy filling.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/choco_almond",
-            "url": "https://thecakery.in/products.html#choco-almond-cake",
-            "sku": "TC-005",
-            "category": "Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#choco-almond-cake",
-              "priceCurrency": "INR",
-              "price": "1100",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#choco-almond-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 6,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#choco-citrus-cake",
-            "name": "Choco Citrus Cake",
-            "description": "Rich cocoa layers with a fresh orange twist and creamy filling.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/choco_citrus",
-            "url": "https://thecakery.in/products.html#choco-citrus-cake",
-            "sku": "TC-006",
-            "category": "Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#choco-citrus-cake",
-              "priceCurrency": "INR",
-              "price": "1200",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#choco-citrus-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 7,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#banofee-noir-cake",
-            "name": "Banofee Noir Cake",
-            "description": "Chocolate cake with banana and toffee flavour in every bite.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Luxurious_Chocolate_Banana_Spiral_Cake",
-            "url": "https://thecakery.in/products.html#banofee-noir-cake",
-            "sku": "TC-007",
-            "category": "Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#banofee-noir-cake",
-              "priceCurrency": "INR",
-              "price": "1300",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#banofee-noir-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 8,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#dry-fruit-chocolate-cake",
-            "name": "Dry-Fruit Chocolate Cake",
-            "description": "Soft chocolate cake filled with dry fruits.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/dry_fruit",
-            "url": "https://thecakery.in/products.html#dry-fruit-chocolate-cake",
-            "sku": "TC-008",
-            "category": "Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#dry-fruit-chocolate-cake",
-              "priceCurrency": "INR",
-              "price": "1400",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#dry-fruit-chocolate-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 9,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#opera-chocolate-cake",
-            "name": "Opera Chocolate Cake",
-            "description": "Layers of chocolate and coffee flavour with a glossy chocolate top.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Luxurious_Opera_Cake_on_Green_Satin",
-            "url": "https://thecakery.in/products.html#opera-chocolate-cake",
-            "sku": "TC-009",
-            "category": "Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#opera-chocolate-cake",
-              "priceCurrency": "INR",
-              "price": "1400",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#opera-chocolate-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 10,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#hazelnut-cake",
-            "name": "Hazelnut Cake",
-            "description": "Rich chocolate cake with a nutty hazelnut flavour and crunchy sides.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/huzel_nut",
-            "url": "https://thecakery.in/products.html#hazelnut-cake",
-            "sku": "TC-010",
-            "category": "Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#hazelnut-cake",
-              "priceCurrency": "INR",
-              "price": "1500",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#hazelnut-cake"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "item": {
+            "@id": "https://thecakery.in/products.html#lotus-biscoff-chocolate"
           }
         },
         {
           "@type": "ListItem",
           "position": 12,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#lotus-biscoff-chocolate",
-            "name": "Lotus Biscoff Chocolate",
-            "description": "Chocolate cake with the sweet caramel biscuit taste of Lotus.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Glossy_Biscoff_Cake_on_Marble_Stand",
-            "url": "https://thecakery.in/products.html#lotus-biscoff-chocolate",
-            "sku": "TC-012",
-            "category": "Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#lotus-biscoff-chocolate",
-              "priceCurrency": "INR",
-              "price": "1500",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#ferrero-rocher-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 13,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#ferrero-rocher-cake",
-            "name": "Ferrero Rocher Cake",
-            "description": "Chocolate hazelnut cake with Nutella frosting and Ferrero Rocher pieces.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/ferroro_rocher",
-            "url": "https://thecakery.in/products.html#ferrero-rocher-cake",
-            "sku": "TC-013",
-            "category": "Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#ferrero-rocher-cake",
-              "priceCurrency": "INR",
-              "price": "1600",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#choco-fudge-cake"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "item": {
+            "@id": "https://thecakery.in/products.html#dark-belgium-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 15,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#choco-fudge-cake",
-            "name": "Choco Fudge Cake",
-            "description": "Moist chocolate layers with smooth fudge frosting and cashew nuts.",
-            "image": "https://res.cloudinary.com/zfzl9mjq/image/upload/f_auto,q_auto/choco_fudged",
-            "url": "https://thecakery.in/products.html#choco-fudge-cake",
-            "sku": "TC-015",
-            "category": "Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#choco-fudge-cake",
-              "priceCurrency": "INR",
-              "price": "1800",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#dubai-chocolate-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 16,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#dark-belgium-cake",
-            "name": "Dark Belgium Cake",
-            "description": "Dark Belgian chocolate cake with a deep, rich taste.",
-            "image": "https://res.cloudinary.com/zfzl9mjq/image/upload/f_auto,q_auto/dark_belgium",
-            "url": "https://thecakery.in/products.html#dark-belgium-cake",
-            "sku": "TC-016",
-            "category": "Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#dark-belgium-cake",
-              "priceCurrency": "INR",
-              "price": "2000",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#choco-pista"
           }
         },
         {
           "@type": "ListItem",
           "position": 17,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#dubai-chocolate-cake",
-            "name": "Dubai Chocolate Cake",
-            "description": "Layered chocolate cake in the popular Dubai style. Rich and indulgent.",
-            "image": "https://res.cloudinary.com/zfzl9mjq/image/upload/f_auto,q_auto/dubai_choco_cake",
-            "url": "https://thecakery.in/products.html#dubai-chocolate-cake",
-            "sku": "TC-017",
-            "category": "Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#dubai-chocolate-cake",
-              "priceCurrency": "INR",
-              "price": "2000",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#irish-coffee-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 18,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#choco-pista",
-            "name": "Choco Pista",
-            "description": "Chocolate layers with smooth ganache and a crunchy pistachio edge.",
-            "image": "https://res.cloudinary.com/zfzl9mjq/image/upload/f_auto,q_auto/choco_pista",
-            "url": "https://thecakery.in/products.html#choco-pista",
-            "sku": "TC-018",
-            "category": "Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#choco-pista",
-              "priceCurrency": "INR",
-              "price": "2000",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#german-chocolate"
           }
         },
         {
           "@type": "ListItem",
           "position": 19,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#kaju-katli-cake",
-            "name": "Kaju Katli Cake",
-            "description": "A cake with the sweet cashew taste of the Indian favourite, kaju katli.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/kaju_kathi_cake",
-            "url": "https://thecakery.in/products.html#kaju-katli-cake",
-            "sku": "TC-019",
-            "category": "Milk Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#kaju-katli-cake",
-              "priceCurrency": "INR",
-              "price": "1500",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#vancho-cake"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "item": {
+            "@id": "https://thecakery.in/products.html#triple-chocolate-mousse"
           }
         },
         {
           "@type": "ListItem",
           "position": 21,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#caramel-pineapple-cake",
-            "name": "Caramel Pineapple Cake",
-            "description": "Soft vanilla sponge with whipped cream, pineapple and a caramel top.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Caremal_pinapple",
-            "url": "https://thecakery.in/products.html#caramel-pineapple-cake",
-            "sku": "TC-021",
-            "category": "Milk Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#caramel-pineapple-cake",
-              "priceCurrency": "INR",
-              "price": "900",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#kulfi-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 22,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#vancho-cake",
-            "name": "Vancho Cake",
-            "description": "Creamy cake with a light vanilla flavour, chocolate swirls and a smooth texture.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/vancho_cake",
-            "url": "https://thecakery.in/products.html#vancho-cake",
-            "sku": "TC-022",
-            "category": "White Based Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#vancho-cake",
-              "priceCurrency": "INR",
-              "price": "1000",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#butter-beef-puff"
           }
         },
         {
           "@type": "ListItem",
           "position": 23,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#triple-chocolate-mousse",
-            "name": "Triple Chocolate Mousse",
-            "description": "Rich chocolate mousse layers with dark chocolate ganache and smooth vanilla cream.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/tripple_chocolate_mousse",
-            "url": "https://thecakery.in/products.html#triple-chocolate-mousse",
-            "sku": "TC-023",
-            "category": "White Based Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#triple-chocolate-mousse",
-              "priceCurrency": "INR",
-              "price": "1700",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#loaded-beef-bun"
           }
         },
         {
           "@type": "ListItem",
           "position": 24,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#dubai-kunafa",
-            "name": "Dubai Kunafa",
-            "description": "Traditional Arabian kunafa with sweet syrup and a creamy texture.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/arabian_kunafa",
-            "url": "https://thecakery.in/products.html#dubai-kunafa",
-            "sku": "TC-024",
-            "category": "Milk Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#dubai-kunafa",
-              "priceCurrency": "INR",
-              "price": "1400",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#beef-quiche"
           }
         },
         {
           "@type": "ListItem",
           "position": 25,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#spanish-delight",
-            "name": "Spanish Delight",
-            "description": "Light, airy sponge cake with a hint of Spanish flavour and a caramel drizzle.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/spanish_delight",
-            "url": "https://thecakery.in/products.html#spanish-delight",
-            "sku": "TC-025",
-            "category": "Milk Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#spanish-delight",
-              "priceCurrency": "INR",
-              "price": "1500",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#chicken-quiche"
           }
         },
         {
           "@type": "ListItem",
           "position": 26,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#nutty-bubble-cake",
-            "name": "Nutty Bubble Cake",
-            "description": "Fluffy bubble cake with crunchy nuts and a sweet surprise inside.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/nutty_bubble",
-            "url": "https://thecakery.in/products.html#nutty-bubble-cake",
-            "sku": "TC-026",
-            "category": "Milk Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#nutty-bubble-cake",
-              "priceCurrency": "INR",
-              "price": "1000",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#egg-mayo-sandwich"
           }
         },
         {
           "@type": "ListItem",
           "position": 27,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#butter-beef-puff",
-            "name": "Butter Beef Puff",
-            "description": "Soft, buttery puff filled with seasoned beef.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Butter_Beef_Puff",
-            "url": "https://thecakery.in/products.html#butter-beef-puff",
-            "sku": "TC-027",
-            "category": "Snacks",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#butter-beef-puff",
-              "priceCurrency": "INR",
-              "price": "40",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#prime-beef-roll"
           }
         },
         {
           "@type": "ListItem",
           "position": 28,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#loaded-beef-bun",
-            "name": "Loaded Beef Bun",
-            "description": "Soft, fluffy bun filled with seasoned beef and fresh vegetables.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Loaded_Beef_Bun",
-            "url": "https://thecakery.in/products.html#loaded-beef-bun",
-            "sku": "TC-028",
-            "category": "Snacks",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#loaded-beef-bun",
-              "priceCurrency": "INR",
-              "price": "60",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#chicken-mayo-sandwich"
           }
         },
         {
           "@type": "ListItem",
           "position": 29,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#beef-quiche",
-            "name": "Beef Quiche",
-            "description": "Quiche filled with seasoned beef and a creamy sauce.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Beef_Quiche",
-            "url": "https://thecakery.in/products.html#beef-quiche",
-            "sku": "TC-029",
-            "category": "Snacks",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#beef-quiche",
-              "priceCurrency": "INR",
-              "price": "60",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#korean-cheese-bun"
           }
         },
         {
           "@type": "ListItem",
           "position": 30,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#chicken-quiche",
-            "name": "Chicken Quiche",
-            "description": "Quiche filled with seasoned chicken and a creamy sauce.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Chicken_Quiche",
-            "url": "https://thecakery.in/products.html#chicken-quiche",
-            "sku": "TC-030",
-            "category": "Snacks",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#chicken-quiche",
-              "priceCurrency": "INR",
-              "price": "60",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#pineapple-jar-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 31,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#egg-mayo-sandwich",
-            "name": "Egg Mayo Sandwich",
-            "description": "Fluffy egg with creamy mayo and fresh vegetables.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Egg_Mayo_Sandwich",
-            "url": "https://thecakery.in/products.html#egg-mayo-sandwich",
-            "sku": "TC-031",
-            "category": "Snacks",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#egg-mayo-sandwich",
-              "priceCurrency": "INR",
-              "price": "70",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#mango-jar-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 32,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#prime-beef-roll",
-            "name": "Prime Beef Roll",
-            "description": "Prime cut beef rolled in a flaky pastry.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Prime_Beef_Roll",
-            "url": "https://thecakery.in/products.html#prime-beef-roll",
-            "sku": "TC-032",
-            "category": "Snacks",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#prime-beef-roll",
-              "priceCurrency": "INR",
-              "price": "80",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#fresh-fruit-jar-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 33,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#chicken-mayo-sandwich",
-            "name": "Chicken Mayo Sandwich",
-            "description": "Grilled chicken breast with creamy mayo and fresh vegetables.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Chicken_Mayo_Sandwich",
-            "url": "https://thecakery.in/products.html#chicken-mayo-sandwich",
-            "sku": "TC-033",
-            "category": "Snacks",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#chicken-mayo-sandwich",
-              "priceCurrency": "INR",
-              "price": "80",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#lotus-jar-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 34,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#korean-cheese-bun",
-            "name": "Korean Cheese Bun",
-            "description": "Soft, fluffy bun filled with melted Korean cheese.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Korean_Cheese_Bun",
-            "url": "https://thecakery.in/products.html#korean-cheese-bun",
-            "sku": "TC-034",
-            "category": "Snacks",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#korean-cheese-bun",
-              "priceCurrency": "INR",
-              "price": "80",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#snickers-jar-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 35,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#pineapple-jar-cake",
-            "name": "Pineapple Jar Cake",
-            "description": "Refreshing pineapple flavour with a moist cake base.",
-            "image": "https://res.cloudinary.com/zfzl9mjq/image/upload/f_auto,q_auto/pinapple_jar_cake",
-            "url": "https://thecakery.in/products.html#pineapple-jar-cake",
-            "sku": "TC-035",
-            "category": "Jar Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#pineapple-jar-cake",
-              "priceCurrency": "INR",
-              "price": "170",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#tender-jar-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 36,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#mango-jar-cake",
-            "name": "Mango Jar Cake",
-            "description": "Soft sponge layered with sweet mango butter cream and mango pieces.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/mango_jar_cake",
-            "url": "https://thecakery.in/products.html#mango-jar-cake",
-            "sku": "TC-036",
-            "category": "Jar Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#mango-jar-cake",
-              "priceCurrency": "INR",
-              "price": "180",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#dubai-chocolate-jar-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 37,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#fresh-fruit-jar-cake",
-            "name": "Fresh Fruit Jar Cake",
-            "description": "Freshly made with seasonal fruits and a hint of vanilla.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Fresh_fruit_jar_cajke",
-            "url": "https://thecakery.in/products.html#fresh-fruit-jar-cake",
-            "sku": "TC-037",
-            "category": "Jar Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#fresh-fruit-jar-cake",
-              "priceCurrency": "INR",
-              "price": "220",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#molten-cookie"
           }
         },
         {
           "@type": "ListItem",
           "position": 38,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#lotus-jar-cake",
-            "name": "Lotus Jar Cake",
-            "description": "Lotus sponge layered with rich chocolate ganache.",
-            "image": "https://res.cloudinary.com/zfzl9mjq/image/upload/f_auto,q_auto/lotus_jar_cake",
-            "url": "https://thecakery.in/products.html#lotus-jar-cake",
-            "sku": "TC-038",
-            "category": "Jar Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#lotus-jar-cake",
-              "priceCurrency": "INR",
-              "price": "250",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#london-pistachio"
           }
         },
         {
           "@type": "ListItem",
           "position": 39,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#snickers-jar-cake",
-            "name": "Snickers Jar Cake",
-            "description": "Snickers and soft sponge layered with silky cream cheese frosting.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Snickers_Jar_cake",
-            "url": "https://thecakery.in/products.html#snickers-jar-cake",
-            "sku": "TC-039",
-            "category": "Jar Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#snickers-jar-cake",
-              "priceCurrency": "INR",
-              "price": "260",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#pistachio-tacos"
           }
         },
         {
           "@type": "ListItem",
           "position": 40,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#tender-jar-cake",
-            "name": "Tender Jar Cake",
-            "description": "Moist cake with a rich coconut flavour and creamy layers.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/tender_jar_cake",
-            "url": "https://thecakery.in/products.html#tender-jar-cake",
-            "sku": "TC-040",
-            "category": "Jar Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#tender-jar-cake",
-              "priceCurrency": "INR",
-              "price": "260",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#chocolate-tacos"
           }
         },
         {
           "@type": "ListItem",
           "position": 41,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#dubai-chocolate-jar-cake",
-            "name": "Dubai Chocolate Jar Cake",
-            "description": "Rich chocolate flavour with a moist cake base and crunchy layers.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/dubai_choco_jar_cake",
-            "url": "https://thecakery.in/products.html#dubai-chocolate-jar-cake",
-            "sku": "TC-041",
-            "category": "Jar Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#dubai-chocolate-jar-cake",
-              "priceCurrency": "INR",
-              "price": "300",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#lotus-tacos"
           }
         },
         {
           "@type": "ListItem",
           "position": 42,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#chikoo-shake",
-            "name": "Chikoo Shake",
-            "description": "Fresh chikoo blended with cold milk for a sweet, creamy shake.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Chikoo_shake",
-            "url": "https://thecakery.in/products.html#chikoo-shake",
-            "sku": "TC-042",
-            "category": "Drinks",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#chikoo-shake",
-              "priceCurrency": "INR",
-              "price": "155",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#pull-me-up-milk-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 43,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#avocado-smoothie",
-            "name": "Avocado Smoothie",
-            "description": "Smooth, ripe avocado blended with honey and fresh milk.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Avacado_Smoothi",
-            "url": "https://thecakery.in/products.html#avocado-smoothie",
-            "sku": "TC-043",
-            "category": "Drinks",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#avocado-smoothie",
-              "priceCurrency": "INR",
-              "price": "160",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#strawberry-tacos"
           }
         },
         {
           "@type": "ListItem",
           "position": 44,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#mango-shake",
-            "name": "Mango Shake",
-            "description": "Creamy mango and ripe banana blended with oat milk.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Mango_shake",
-            "url": "https://thecakery.in/products.html#mango-shake",
-            "sku": "TC-044",
-            "category": "Drinks",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#mango-shake",
-              "priceCurrency": "INR",
-              "price": "165",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#lava"
           }
         },
         {
           "@type": "ListItem",
           "position": 45,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#custard-apple-shake",
-            "name": "Custard Apple Shake",
-            "description": "Creamy custard apple blended with milk and a hint of vanilla.",
-            "image": "https://res.cloudinary.com/ozzeyzin/image/upload/f_auto,q_auto/Custurd_apple",
-            "url": "https://thecakery.in/products.html#custard-apple-shake",
-            "sku": "TC-045",
-            "category": "Drinks",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#custard-apple-shake",
-              "priceCurrency": "INR",
-              "price": "175",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#london-cake"
           }
         },
         {
           "@type": "ListItem",
           "position": 46,
           "item": {
-            "@type": "Product",
-            "@id": "https://thecakery.in/products.html#kulfi-cake",
-            "name": "Kulfi",
-            "description": "Soft white cake with the creamy, nutty taste of traditional kulfi.",
-            "image": "https://thecakery.in/assets/View%20all%20Products/Kulfi%20cake.png",
-            "url": "https://thecakery.in/products.html#kulfi-cake",
-            "sku": "TC-046",
-            "category": "White Based Cakes",
-            "brand": {
-              "@id": "https://thecakery.in/#organization"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://thecakery.in/products.html#kulfi-cake",
-              "priceCurrency": "INR",
-              "price": "1200",
-              "availability": "https://schema.org/InStock",
-              "itemCondition": "https://schema.org/NewCondition",
-              "seller": {
-                "@id": "https://thecakery.in/#organization"
-              }
-            }
+            "@id": "https://thecakery.in/products.html#chocolate-noir"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "item": {
+            "@id": "https://thecakery.in/products.html#strawberry-noir"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "item": {
+            "@id": "https://thecakery.in/products.html#brownie-ice-cream"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "item": {
+            "@id": "https://thecakery.in/products.html#truffle-with-ice-cream"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "item": {
+            "@id": "https://thecakery.in/products.html#choco-crunch"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "item": {
+            "@id": "https://thecakery.in/products.html#strawberry-pistachio"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "item": {
+            "@id": "https://thecakery.in/products.html#chikoo-shake"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "item": {
+            "@id": "https://thecakery.in/products.html#avocado-smoothie"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "item": {
+            "@id": "https://thecakery.in/products.html#mango-shake"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "item": {
+            "@id": "https://thecakery.in/products.html#custard-apple-shake"
           }
         }
       ]
