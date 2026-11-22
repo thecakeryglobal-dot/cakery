@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" href="./assets/Cakery-fav-icon.png">
+  <link rel="icon" href="/assets/Cakery-fav-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="description" content="Search products from The Cakery, Kannur.">
@@ -14,7 +14,7 @@
   <style>
     @font-face {
       font-family: "Metropolis";
-      src: url("./assets/Fonts Used/metropolis-regular.woff2") format("woff2");
+      src: url("/assets/Fonts Used/metropolis-regular.woff2") format("woff2");
       font-display: swap;
     }
 
@@ -626,6 +626,7 @@
       }
     }
   </style>
+<link rel="stylesheet" href="/seasonal/santa-hat.css" />
 </head>
 
 
@@ -639,12 +640,12 @@
 
       <a
         class="logo"
-        href="./index.html"
+        href="/"
         aria-label="The Cakery Home"
       >
 
         <img
-          src="./assets/cakery-logo-transparent.png"
+          src="/assets/cakery-logo-transparent.png"
           alt="The Cakery"
         >
 
@@ -655,14 +656,14 @@
 
         <a
           class="header-link"
-          href="./products.html"
+          href="/products/"
         >
           ← All Products
         </a>
 
         <a
           class="header-link"
-          href="./cart.html"
+          href="/cart/"
         >
           Cart →
         </a>
@@ -775,7 +776,7 @@
 
       This page reads the REAL product cards from:
 
-          ./products.html
+          /products/
 
       Therefore:
 
@@ -917,14 +918,14 @@
 
 
       /* -----------------------------------------------
-         LOAD PRODUCTS FROM ./products.html
+         LOAD PRODUCTS FROM /products/
       ------------------------------------------------ */
 
       async function getProducts() {
 
         const response =
           await fetch(
-            "./products.html",
+            "/products/",
             {
               cache: "no-store"
             }
@@ -934,7 +935,7 @@
         if (!response.ok) {
 
           throw new Error(
-            "Could not load ./products.html"
+            "Could not load /products/"
           );
 
         }
@@ -958,7 +959,7 @@
         /*
           IMPORTANT:
 
-          Your ./products.html uses:
+          Your /products/ uses:
 
           .product-card
 
@@ -1118,7 +1119,7 @@
                   ? cartElement.getAttribute(
                       "href"
                     )
-                  : "./cart.html",
+                  : "/cart/",
 
               orderLink:
                 orderElement
@@ -1390,7 +1391,7 @@
 
         const cartLink =
           product.cartLink ||
-          "./cart.html";
+          "/cart/";
 
 
         const orderLink =
@@ -1523,8 +1524,8 @@
 
         const errorMessage =
           window.location.protocol === "file:"
-            ? "Open this page through a local web server (for example, VS Code Live Server). Browsers block loading ./products.html when this page is opened directly as a file."
-            : "Please make sure ./products.html is available in the same folder as /search-results.";
+            ? "Open this page through a local web server (for example, VS Code Live Server). Browsers block loading /products/ when this page is opened directly as a file."
+            : "Please make sure /products/ is available in the same folder as /search-results.";
 
         resultsContainer.innerHTML = `
 
@@ -1544,7 +1545,7 @@
 
             <a
               class="products-button"
-              href="./products.html"
+              href="/products/"
             >
               Open Products
             </a>
@@ -1627,7 +1628,7 @@
 
 
         /*
-          NO PRODUCTS FOUND IN ./products.html
+          NO PRODUCTS FOUND IN /products/
         */
 
         if (
@@ -1638,7 +1639,7 @@
             "No Products";
 
           introText.textContent =
-            "No product cards were found in ./products.html.";
+            "No product cards were found in /products/.";
 
           resultCount.textContent =
             "0 products";
@@ -1752,7 +1753,7 @@
 
           The image here comes directly
           from the SAME product card
-          in ./products.html.
+          in /products/.
         */
 
         resultsContainer.innerHTML =
@@ -1879,6 +1880,7 @@
 
   </script>
 
+<script src="/seasonal/santa-hat.js"></script>
 </body>
 
 </html>

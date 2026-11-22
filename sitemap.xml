@@ -6,11 +6,23 @@
   </url>
 
   <url>
-    <loc>https://thecakery.in/products.html</loc>
+    <loc>https://thecakery.in/about/</loc>
   </url>
 
   <url>
-    <loc>https://thecakery.in/menu.html</loc>
+    <loc>https://thecakery.in/contact/</loc>
+  </url>
+
+  <url>
+    <loc>https://thecakery.in/products/</loc>
+  </url>
+
+  <url>
+    <loc>https://thecakery.in/menu/</loc>
+  </url>
+
+  <url>
+    <loc>https://thecakery.in/locations/</loc>
   </url>
 
 </urlset>

@@ -8,7 +8,7 @@
       content="Best cakes in Kannur with free delivery within 20 km. Birthday, wedding and custom cakes from ₹700. Order on WhatsApp."
     />
     <link rel="canonical" href="https://thecakery.in/">
-    <link rel="icon" href="./assets/Cakery-fav-icon.png">
+    <link rel="icon" href="/assets/Cakery-fav-icon.png">
     <!-- Open Graph: WhatsApp and social sharing preview -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Cakery">
@@ -61,7 +61,7 @@
     <style>
       @font-face {
         font-family: "Metropolis"; 
-        src: url("./assets/Fonts Used/metropolis-regular.woff2") format("woff2");
+        src: url("/assets/Fonts Used/metropolis-regular.woff2") format("woff2");
         font-style: normal;
         font-weight: 100 900;
         font-display: swap;
@@ -391,7 +391,7 @@
 
       .hero-grid {
         position: relative;
-        z-index: 1;
+        z-index: 3;
         width: min(var(--max-width), calc(100% - 32px));
         min-height: calc(100vh - 120px);
         margin: 0 auto;
@@ -493,6 +493,7 @@
         filter: drop-shadow(0 28px 40px rgba(0, 0, 0, 0.22));
         transform: rotate(10deg);
       }
+
 
       @media (max-height: 820px) and (min-width: 1121px) {
         .hero-grid {
@@ -2238,38 +2239,39 @@
   }
 }
     </style>
+    <link rel="stylesheet" href="/seasonal/santa-hat.css" />
   </head>
   <body>
     <header class="site-header" id="top-header">
       <nav class="nav-shell" aria-label="Main navigation">
         <a href="#home" class="brand" aria-label="The Cakery home">
-          <img class="brand-logo" src="./assets/cakery-logo-transparent.png" alt="The Cakery" />
+          <img class="brand-logo" src="/assets/cakery-logo-transparent.png" alt="The Cakery" />
         </a>
 
         <ul class="nav-main" aria-label="Desktop navigation">
-          <li class="nav-item active"><a href="#home">Home</a></li>
-          <li class="nav-item"><a href="#about">About</a></li>
-          <li class="nav-item"><a href="#cakes">Cakes</a></li>
-          <li class="nav-item"><a href="#why">Why choose us</a></li>
+          <li class="nav-item active"><a href="/" aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="/about/">About</a></li>
+          <li class="nav-item"><a href="/products/">Products</a></li>
+          <!-- <li class="nav-item"><a href="#why">Why choose us</a></li>
           <li class="nav-item"><a href="#reviews">Reviews</a></li>
-          <li class="nav-item"><a href="#faq">FAQ</a></li>
-          <li class="nav-item"><a href="#contact">Contact</a></li>
+          <li class="nav-item"><a href="#faq">FAQ</a></li> -->
+          <li class="nav-item"><a href="/contact/">Contact</a></li>
         </ul>
 
         <div class="nav-actions">
-          <a class="icon-button wishlist-link" href="./wishlist.html" aria-label="View your wishlist">
+          <a class="icon-button wishlist-link" href="/wishlist/" aria-label="View your wishlist">
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M20.8 8.8c0 5.3-8.8 10.2-8.8 10.2S3.2 14.1 3.2 8.8A4.8 4.8 0 0 1 12 6.1a4.8 4.8 0 0 1 8.8 2.7Z"></path>
             </svg>
           </a>
-          <a class="icon-button cart-btn" href="./cart.html" aria-label="View your cart">
+          <a class="icon-button cart-btn" href="/cart/" aria-label="View your cart">
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="9" cy="19" r="1.4"></circle>
               <circle cx="17" cy="19" r="1.4"></circle>
               <path d="M3 4h2l2.7 10.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.76L20 7.5H7"></path>
             </svg>
           </a>
-          <a href="https://wa.me/918547553300" class="primary-btn" target="_blank" rel="noopener noreferrer">Order Now</a> 
+          <a href="tel:+918547553300" class="primary-btn" target="_blank" rel="noopener noreferrer">Order Now</a> 
           <button class="icon-button mobile-toggle" type="button" aria-label="Open menu" aria-expanded="false">
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
               <path d="M3 7h18M3 12h18M3 17h18"></path>
@@ -2283,19 +2285,16 @@
       <div class="mobile-menu-inner">
         <div class="mobile-head">
           <a href="#home" class="brand" aria-label="The Cakery home">
-            <img class="brand-logo" src="./assets/cakery-logo-transparent.png" alt="The Cakery" />
+            <img class="brand-logo" src="/assets/cakery-logo-transparent.png" alt="The Cakery" />
           </a>
           <button class="close-menu" type="button" aria-label="Close navigation">✕</button>
         </div>
 
         <ul class="mobile-list">
-          <li class="mobile-item"><a href="#home"><span>Home</span><span>01</span></a></li>
-          <li class="mobile-item"><a href="#about"><span>About</span><span>02</span></a></li>
-          <li class="mobile-item"><a href="#cakes"><span>Cakes</span><span>03</span></a></li>
-          <li class="mobile-item"><a href="#why"><span>Why choose us</span><span>06</span></a></li>
-          <li class="mobile-item"><a href="#reviews"><span>Reviews</span><span>07</span></a></li>
-          <li class="mobile-item"><a href="#faq"><span>FAQ</span><span>08</span></a></li>
-          <li class="mobile-item"><a href="#contact"><span>Contact</span><span>09</span></a></li>
+          <li class="mobile-item"><a href="/" aria-current="page"><span>Home</span><span>01</span></a></li>
+          <li class="mobile-item"><a href="/about/"><span>About</span><span>02</span></a></li>
+          <li class="mobile-item"><a href="/products/"><span>Products</span><span>03</span></a></li>
+          <li class="mobile-item"><a href="/contact/"><span>Contact</span><span>04</span></a></li>
         </ul>
 
         <div class="mobile-order">
@@ -2326,8 +2325,8 @@
               The Cakery offers the best cakes in Kannur for birthdays, weddings, anniversaries, and every special day. Fresh, tasty, and made just for you. Order your cake today!
             </p>
             <div class="hero-actions">
-              <a href="tel:+918547553300" class="primary-btn">Order your cake today</a>
-              <a href="./menu.html" class="secondary-btn">View Menu</a>
+              <a href="/locations/" class="primary-btn" aria-label="View Cakery locations in Kannur and Taliparamba">Our Locations</a>
+              <a href="/menu/" class="secondary-btn">View Menu</a>
             </div>
             <div class="mini-trust" aria-label="The Cakery trust indicators">
               <span><span class="dot" aria-hidden="true"></span> Freshly baked</span>
@@ -2367,7 +2366,7 @@
                 <p>Soft chocolate sponge with fresh cream and a classic cherry taste.</p>
                 <div class="product-actions">
                   <a class="text-link" href="tel:+918547553300">Order</a>
-                  <a class="primary-btn cart-cta" href="./cart.html?add=Black%20Forest&price=800">Add to cart</a>
+                  <a class="primary-btn cart-cta" href="/cart/?add=Black%20Forest&price=800">Add to cart</a>
                 </div>
               </div>
             </article>
@@ -2384,7 +2383,7 @@
                 <p>Soft cake with creamy layers and sweet blueberry flavour.</p>
                 <div class="product-actions">
                   <a class="text-link" href="tel:+918547553300">Order</a>
-                  <a class="primary-btn cart-cta" href="./cart.html?add=Blue%20berry&price=1000">Add to cart</a>
+                  <a class="primary-btn cart-cta" href="/cart/?add=Blue%20berry&price=1000">Add to cart</a>
                 </div>
               </div>
             </article>
@@ -2401,7 +2400,7 @@
                 <p>Light sponge with fresh cream and sweet strawberry.</p>
                 <div class="product-actions">
                   <a class="text-link" href="tel:+918547553300">Order</a>
-                  <a class="primary-btn cart-cta" href="./cart.html?add=Straw%20Berry&price=1000">Add to cart</a>
+                  <a class="primary-btn cart-cta" href="/cart/?add=Straw%20Berry&price=1000">Add to cart</a>
                 </div>
               </div>
             </article>
@@ -2418,7 +2417,7 @@
                 <p>Chocolate cake with caramel, peanuts and a nutty crunch.</p>
                 <div class="product-actions">
                   <a class="text-link" href="tel:+918547553300">Order</a>
-                  <a class="primary-btn cart-cta" href="./cart.html?add=Snickers%20Cake&price=1500">Add to cart</a>
+                  <a class="primary-btn cart-cta" href="/cart/?add=Snickers%20Cake&price=1500">Add to cart</a>
                 </div>
               </div>
             </article>
@@ -2435,7 +2434,7 @@
                 <p>Chocolate cake topped with crunchy KitKat wafer pieces.</p>
                 <div class="product-actions">
                   <a class="text-link" href="tel:+918547553300">Order</a>
-                  <a class="primary-btn cart-cta" href="./cart.html?add=KitKat&price=1500">Add to cart</a>
+                  <a class="primary-btn cart-cta" href="/cart/?add=KitKat&price=1500">Add to cart</a>
                 </div>
               </div>
             </article>
@@ -2452,13 +2451,13 @@
                 <p>Smooth, creamy cheesecake with a rich pistachio taste.</p>
                 <div class="product-actions">
                   <a class="text-link" href="tel:+918547553300">Order</a>
-                  <a class="primary-btn cart-cta" href="./cart.html?add=Pistachio%20Cheese%20Cake&price=1900">Add to cart</a>
+                  <a class="primary-btn cart-cta" href="/cart/?add=Pistachio%20Cheese%20Cake&price=1900">Add to cart</a>
                 </div>
               </div>
             </article>
           </div>
           <div class="collection-footer">
-            <a class="primary-btn" href="./products.html">View All Products <span aria-hidden="true"></span></a>
+            <a class="primary-btn" href="/products/">View All Products <span aria-hidden="true"></span></a>
           </div>
         </div>
       </section>
@@ -2670,7 +2669,7 @@
           <div class="contact-grid">
             <div class="contact-card">
               <!-- <p class="eyebrow">Kannur, Kerala</p> -->
-              <img class="contact-card-logo" src="./assets/cakery-logo-transparent.png" alt="The Cakery" />
+              <img class="contact-card-logo" src="/assets/cakery-logo-transparent.png" alt="The Cakery" />
               <div class="contact-list">
                 <div class="contact-item">
                   <strong>Location</strong>
@@ -2679,7 +2678,7 @@
                     <span aria-hidden="true">|</span>
                     <a href="https://www.google.com/maps/place/The+Cakery,+Taliparamba/@12.0418126,75.3616029,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba43f002e11816b:0x3c5f12e0c2ec7258!8m2!3d12.0418074!4d75.3641778!16s%2Fg%2F11zdbv_xpz?authuser=0&amp;entry=ttu&amp;g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="The Cakery, Taliparamba on Google Maps">Taliparamba</a>
                     <span aria-hidden="true">|</span>
-                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="The Cakery, Pappinisseri on Google Maps">Pappinisseri</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="The Cakery, Pappinisseri on Google Maps">Thalassery</a>
                   </span>
                 </div>
                 <div class="contact-item">
@@ -2694,11 +2693,11 @@
                   <strong>Email</strong>
                   <a href="mailto:thecakeryglobal@gmail.com">thecakeryglobal@gmail.com</a>
                 </div>
-                
+
                 <div class="contact-item">
                 <strong>Social</strong>
             <span>
-               <a href="https://www.instagram.com/the_cakery.in?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Instagram</a>
+               <a href="https://www.instagram.com/the_cakery.in/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Instagram</a>
               &middot;
                <a href="https://www.facebook.com/share/1Kf7zpr5Tp/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Facebook</a>
              </span>
@@ -2769,12 +2768,12 @@
       <div class="container footer-grid">
         <div>
           <a href="#home" class="brand" aria-label="The Cakery home">
-            <img class="brand-logo" src="./assets/cakery-logo-transparent.png" alt="The Cakery" />
+            <img class="brand-logo" src="/assets/cakery-logo-transparent.png" alt="The Cakery" />
           </a>
           <p>Premium cakes, pastries, snacks and bakery treats in Kannur.
           <p>Proudly under The Borma &amp; Co.</p>
           <div class="socials" aria-label="Social links">
-            <a href="https://www.instagram.com/the_cakery.in?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" aria-label="Instagram">
+            <a href="https://www.instagram.com/the_cakery.in/" aria-label="Instagram">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <rect x="3" y="3" width="18" height="18" rx="5"></rect>
                 <circle cx="12" cy="12" r="4"></circle>
@@ -2799,9 +2798,9 @@
           <h3 style="margin: 0 0 14px; font-size: 1.1rem;">Explore</h3>
           <ul class="footer-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#cakes">Cakes</a></li>
-            <li><a href="./products.html">Products</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/contact/">Contact</a></li>
           </ul>
         </div>
 
@@ -2810,7 +2809,7 @@
           <ul class="footer-links">
             <li><a href="#reviews">Reviews</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/contact/">Contact</a></li>
             <li><a href="tel:+918547553300">Delivery</a></li>
           </ul>
         </div>
@@ -2820,7 +2819,7 @@
           <ul class="footer-links">
             <li><a href="https://www.google.com/maps/place/The+Cakery/@11.8709391,75.3581511,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba43d001789dff7:0xc208d4a071e9db2e!8m2!3d11.8709339!4d75.360726!16s%2Fg%2F11njfgp162?authuser=0&entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Kannur location">Kannur</a></li>
             <li><a href="https://www.google.com/maps/place/The+Cakery,+Taliparamba/@12.0418126,75.3616029,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba43f002e11816b:0x3c5f12e0c2ec7258!8m2!3d12.0418074!4d75.3641778!16s%2Fg%2F11zdbv_xpz?authuser=0&entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Taliparamba location">Taliparamba</a></li>
-            <li>Pappinisseri</li>
+            <li>Thalassery</li>
             <li><a href="mailto:thecakeryglobal@gmail.com" aria-label="Email The Cakery">thecakeryglobal@gmail.com</a></li>
           </ul>
         </div>
@@ -2848,7 +2847,6 @@
         });
 
         const header = document.querySelector('.site-header');
-        const navLinks = [...document.querySelectorAll('.nav-item a, .mobile-item a')];
         const menuToggle = document.querySelector('.mobile-toggle');
         const mobileMenu = document.querySelector('.mobile-menu');
         const closeMenuButton = document.querySelector('.close-menu');
@@ -2863,50 +2861,6 @@
 
         window.addEventListener('scroll', handleScrollHeader, { passive: true });
         handleScrollHeader();
-
-        function setActiveLink() {
-          const sections = [...document.querySelectorAll('main section[id], section[id]')];
-          let currentId = 'home';
-
-          for (const section of sections) {
-            const rect = section.getBoundingClientRect();
-            if (rect.top <= 140 && rect.bottom >= 140) {
-              currentId = section.id;
-            }
-          }
-
-          navLinks.forEach((link) => {
-            const href = link.getAttribute('href');
-            const match = href && href.includes('#') ? href.slice(1) : '';
-            const parent = link.closest('.nav-item');
-
-            if (parent) {
-              parent.classList.toggle('active', match === currentId);
-            }
-          });
-        }
-
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-                const id = entry.target.id;
-                navLinks.forEach((link) => {
-                  const href = link.getAttribute('href');
-                  const match = href && href.includes('#') ? href.slice(1) : '';
-                  const parent = link.closest('.nav-item');
-                  if (parent) {
-                    parent.classList.toggle('active', match === id);
-                  }
-                });
-              }
-            });
-          },
-          { threshold: [0.4, 0.6, 0.8] }
-        );
-
-        document.querySelectorAll('section[id]').forEach((section) => observer.observe(section));
-        window.addEventListener('scroll', setActiveLink, { passive: true });
 
         function toggleMenu(forceState) {
           const nextState = typeof forceState === 'boolean' ? forceState : !mobileMenu.classList.contains('open');
@@ -3080,12 +3034,12 @@
               setWishlist(wishlist);
             }
 
-            window.location.href = './wishlist.html';
+            window.location.href = '/wishlist/';
           });
         });
 
         const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
-        const localImageFallback = './assets/cakery-logo-transparent.png';
+        const localImageFallback = '/assets/cakery-logo-transparent.png';
         document.querySelectorAll('img').forEach((image) => {
           const useFallback = () => {
             if (image.dataset.fallbackApplied) return;
@@ -3146,7 +3100,7 @@
 
   <!-- Instagram Brand Icon -->
   <a
-    href="https://www.instagram.com/the_cakery.in?utm_source=ig_web_button_share_sheet&amp;exln=ZDNlZDc0MzIxNw=="
+    href="https://www.instagram.com/the_cakery.in/"
     class="social-icon"
     target="_blank"
     rel="noopener noreferrer"
@@ -3170,5 +3124,7 @@
     </svg>
   </a>
 </div>
+
+    <script src="/seasonal/santa-hat.js"></script>
   </body>
 </html>

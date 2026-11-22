@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="./assets/Cakery-fav-icon.png">
+    <link rel="icon" href="/assets/Cakery-fav-icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Your cart at The Cakery." />
     <title>Your Cart | The Cakery</title>
@@ -10,7 +10,7 @@
     <style>
       @font-face {
         font-family: "Metropolis";
-        src: url("./assets/Fonts Used/metropolis-regular.woff2") format("woff2");
+        src: url("/assets/Fonts Used/metropolis-regular.woff2") format("woff2");
         font-style: normal;
         font-weight: 100 900;
         font-display: swap;
@@ -197,10 +197,10 @@
   </head>
   <body>
     <header class="container cart-header">
-      <a class="brand" href="./index.html" aria-label="The Cakery home">
-        <img class="brand-mark" src="./assets/cakery-logo-transparent.png" alt="The Cakery" />
+      <a class="brand" href="/" aria-label="The Cakery home">
+        <img class="brand-mark" src="/assets/cakery-logo-transparent.png" alt="The Cakery" />
       </a>
-      <a class="back-link" href="./index.html#cakes">Continue shopping</a>
+      <a class="back-link" href="/#cakes">Continue shopping</a>
     </header>
 
     <main class="container">
@@ -254,7 +254,7 @@
           cart.push({ name: productName, price: productPrice, quantity: 1 });
         }
         localStorage.setItem(cartKey, JSON.stringify(cart));
-        window.history.replaceState({}, document.title, './cart.html');
+        window.history.replaceState({}, document.title, '/cart/');
       }
 
       const cartList = document.querySelector('#cart-list');
@@ -286,7 +286,7 @@
         total.textContent = pricedTotal ? `₹${pricedTotal.toLocaleString('en-IN')}` : 'Custom pricing';
 
         if (!cart.length) {
-          cartList.innerHTML = '<div class="empty-state"><strong>Your cart is waiting for something sweet.</strong><p>Add a cake from our collection to get started.</p><a class="back-link" href="./index.html#cakes">Browse cakes</a></div>';
+          cartList.innerHTML = '<div class="empty-state"><strong>Your cart is waiting for something sweet.</strong><p>Add a cake from our collection to get started.</p><a class="back-link" href="/#cakes">Browse cakes</a></div>';
           checkoutButton.disabled = true;
           checkoutButton.style.opacity = '0.5';
           return;
@@ -322,11 +322,11 @@
         const pricedTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
         const totalText = pricedTotal ? `₹${pricedTotal.toLocaleString('en-IN')}` : 'Custom pricing';
         const message = [
-          'Hello The Cakery,',
+          'Hello The Cakery!,',
           '',
           'I would like to place an order with the following details',
           '',
-          'Order Summary',
+          'Order Details:',
           ...orderLines,
           `Total Amount: ${totalText}`,
           '',
@@ -336,9 +336,9 @@
           '• Delivery Address :',
           '• Preferred Delivery Date & Time :',
           '',
-          "Kindly confirm the cake's availability and delivery details, and share the payment information to proceed.",
+          "Special Instructions:",
           '',
-          'Looking forward to enjoying your delicious cake!',
+          'Please confirm the availability and total amount.',
           '',
           'Thank you!'
         ].join('\n');

@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="./assets/Cakery-fav-icon.png">
+    <link rel="icon" href="/assets/Cakery-fav-icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Your wishlisted cakes from The Cakery." />
     <title>Your Wishlist | The Cakery</title>
     <style>
       @font-face {
         font-family: "Metropolis";
-        src: url("./assets/Fonts Used/metropolis-regular.woff2") format("woff2");
+        src: url("/assets/Fonts Used/metropolis-regular.woff2") format("woff2");
         font-style: normal;
         font-weight: 100 900;
         font-display: swap;
@@ -190,13 +190,14 @@
         .remove-btn { min-height: 44px; padding: 0.55rem 0.8rem; }
       }
     </style>
+    <link rel="stylesheet" href="/seasonal/santa-hat.css" />
   </head>
   <body>
     <header class="container page-header">
-      <a class="brand" href="./index.html" aria-label="The Cakery home">
-        <img src="./assets/cakery-logo-transparent.png" alt="The Cakery" />
+      <a class="brand" href="/" aria-label="The Cakery home">
+        <img src="/assets/cakery-logo-transparent.png" alt="The Cakery" />
       </a>
-      <a class="back-link" href="./index.html#cakes">Back to products</a>
+      <a class="back-link" href="/#cakes">Back to products</a>
     </header>
 
     <main class="container">
@@ -248,7 +249,7 @@
           const source = String(value || '');
           return /^(https?:|\.\/|\/)/i.test(source)
             ? source
-            : './assets/cakery-logo-transparent.png';
+            : '/assets/cakery-logo-transparent.png';
         }
 
         function renderWishlist() {
@@ -263,7 +264,7 @@
           emptyState.hidden = true;
           grid.innerHTML = items.map((item) => `
             <article class="wishlist-card">
-              <img src="${escapeHTML(safeImageSource(item.image || './assets/cakery-logo-transparent.png'))}" alt="${escapeHTML(item.name)}" loading="lazy" />
+              <img src="${escapeHTML(safeImageSource(item.image || '/assets/cakery-logo-transparent.png'))}" alt="${escapeHTML(item.name)}" loading="lazy" />
               <div class="wishlist-body">
                 <h2>${escapeHTML(item.name)}</h2>
                 <p>Handcrafted with care for your next celebration.</p>
@@ -287,5 +288,6 @@
         renderWishlist();
       })();
     </script>
+    <script src="/seasonal/santa-hat.js"></script>
   </body>
 </html>

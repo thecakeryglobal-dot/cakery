@@ -1,0 +1,37 @@
+.product-card,
+.best-card,
+.wishlist-card {
+  position: relative;
+  overflow: visible;
+}
+
+.product-card > .cakery-santa-hat,
+.best-card > .cakery-santa-hat,
+.wishlist-card > .cakery-santa-hat {
+  position: absolute;
+  z-index: 20;
+  top: -24px;
+  right: -18px;
+  width: clamp(78px, 16%, 112px);
+  height: auto;
+  max-width: none;
+  object-fit: contain;
+  pointer-events: none;
+  filter: drop-shadow(0 8px 10px rgba(2, 15, 11, 0.34));
+  transform: rotate(5deg);
+  transform-origin: 55% 78%;
+}
+
+.wishlist-btn {
+  z-index: 30;
+}
+
+@media (max-width: 700px) {
+  .product-card > .cakery-santa-hat,
+  .best-card > .cakery-santa-hat,
+  .wishlist-card > .cakery-santa-hat {
+    top: -18px;
+    right: -10px;
+    width: clamp(68px, 20%, 92px);
+  }
+}
